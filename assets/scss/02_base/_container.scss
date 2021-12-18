@@ -1,0 +1,11 @@
+.container {
+  margin: 0 auto;
+  width: 1398px;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 446px);
+  column-gap: 30px;
+  row-gap: 40px;
+}

@@ -1,0 +1,24 @@
+@use './01_vendors/swiper-bundle.min';
+
+@use './02_base/fonts';
+@use './02_base/global';
+@use './02_base/variables';
+@use './02_base/container';
+
+@use './03_components/calendar';
+@use './03_components/our-team';
+@use './03_components/banners';
+@use './03_components/cards';
+@use './03_components/buttons';
+@use './03_components/footer';
+@use './03_components/headers';
+@use './03_components/navigation';
+@use './03_components/schedual';
+@use './03_components/video';
+@use './03_components/moto';
+@use './03_components/faq';
+@use './03_components/tabs';
+@use './03_components/contact-form';
+@use './03_components/pagination';
+
+@use './04_pages/moto-tour';

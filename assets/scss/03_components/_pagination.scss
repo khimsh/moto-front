@@ -1,0 +1,48 @@
+.pagination {
+  margin-block: 70px;
+
+  svg {
+    width: 14px;
+    height: 16px;
+    display: block;
+    fill: var(--clr-black);
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+  }
+
+  li {
+    a {
+      font-family: var(--f-righteous);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--clr-white);
+      text-decoration: none;
+
+      &:hover,
+      &:active,
+      &.active {
+        color: var(--clr-main);
+      }
+    }
+  }
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #acacac;
+
+    &:hover,
+    &:focus {
+      background-color: var(--clr-main);
+    }
+  }
+}

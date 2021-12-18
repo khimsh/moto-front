@@ -1,0 +1,70 @@
+.contact-form {
+  padding: 30px;
+  padding-top: 40px;
+  max-width: 573px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  background-color: var(--clr-main);
+
+  input[type='text'],
+  input[type='email'] {
+    height: 50px;
+    width: 100%;
+    padding-inline: 20px;
+    font-family: var(--f-chromatica);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--clr-white);
+    background-color: var(--clr-main);
+    border: 1px solid var(--clr-white);
+
+    &::placeholder {
+      font-family: var(--f-chromatica);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--clr-white);
+      text-transform: capitalize;
+    }
+  }
+
+  textarea {
+    height: 200px;
+    width: 100%;
+    padding: 20px;
+    font-family: var(--f-chromatica);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--clr-white);
+    background-color: var(--clr-main);
+    border: 1px solid var(--clr-white);
+
+    &::placeholder {
+      font-family: var(--f-chromatica);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--clr-white);
+      text-transform: capitalize;
+    }
+  }
+
+  button[type='submit'] {
+    height: 50px;
+    width: 100%;
+    padding-inline: 20px;
+    font-family: var(--f-chromatica);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    background-color: var(--clr-black);
+    border: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &:active {
+      color: var(--clr-black);
+      background-color: var(--clr-white);
+    }
+  }
+}

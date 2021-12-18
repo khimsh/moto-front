@@ -1,0 +1,87 @@
+.banner {
+  position: relative;
+
+  &--fullscreen {
+    width: 100%;
+    height: 100vh;
+  }
+
+  &--overlay {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99;
+      background: transparent
+        linear-gradient(
+          213deg,
+          #000000ed 0%,
+          #00000071 39%,
+          #17121273 59%,
+          #54545400 100%
+        )
+        0% 0% no-repeat padding-box;
+    }
+  }
+
+  &--about {
+    background: url(../images/GMYME2600.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99;
+      background: hsl(0 0% 0% / 0.42);
+    }
+  }
+
+  &--moto-tour {
+    background: url(../images/IMG_E2407.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99;
+      background: hsl(0 0% 0% / 0.42);
+    }
+  }
+
+  &__center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    position: relative;
+    font-family: var(--f-righteous);
+    font-size: 70px;
+    color: var(--clr-main);
+    text-transform: uppercase;
+    z-index: 1000000;
+
+    &--center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+    }
+  }
+}

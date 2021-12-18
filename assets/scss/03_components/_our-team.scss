@@ -1,0 +1,100 @@
+.our-team {
+  margin-top: 30px;
+  margin-bottom: 94px;
+
+  &__title {
+    font-family: var(--f-righteous);
+    font-size: 63px;
+    font-weight: 400;
+    color: var(--clr-main);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    row-gap: 50px;
+
+    @media only screen and (min-width: 992px) {
+      grid-template-columns: 1fr 1fr;
+
+      column-gap: 100px;
+      justify-content: space-between;
+    }
+  }
+}
+
+.team-member {
+  figure {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__heading {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #053727;
+  }
+
+  &__name {
+    font-family: var(--f-righteous);
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--clr-white);
+    text-transform: uppercase;
+  }
+
+  &__job {
+    font-family: var(--f-righteous);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--clr-main);
+    text-transform: uppercase;
+  }
+
+  &__highlight {
+    margin-bottom: 20px;
+    font-family: var(--f-righteous);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--clr-white);
+    opacity: 0.73;
+    text-transform: uppercase;
+  }
+
+  &__bio {
+    font-family: var(--f-chromatica);
+    font-size: 16px;
+    font-weight: 500;
+    color: hsl(176, 7%, 42%);
+    line-height: 17px;
+  }
+
+  &__social {
+    margin-top: 30px;
+    display: flex;
+    gap: 22px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 67px;
+      height: 67px;
+      border: 1px solid var(--clr-main);
+      border-radius: 67px;
+      text-decoration: none;
+    }
+  }
+}

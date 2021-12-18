@@ -1,0 +1,272 @@
+.schedual {
+  &__date {
+    margin-bottom: 30px;
+    font-family: var(--f-righteous);
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--clr-black);
+    text-transform: uppercase;
+  }
+}
+
+.date-info {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+
+  & > div {
+    width: 78px;
+    text-align: center;
+    font-family: var(--f-chromatica);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--clr-main);
+    text-transform: uppercase;
+  }
+}
+
+.schedual-list {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.schedual-item {
+  display: grid;
+  grid-template-columns: 166px 1fr 78px 298px;
+  column-gap: 30px;
+
+  & > div {
+    font-family: var(--f-chromatica);
+    font-size: 20px;
+    font-weight: 500;
+    background: #efefef;
+    border-radius: 5px;
+  }
+
+  .tour-info {
+    position: relative;
+  }
+
+  &__additional-info {
+    // display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    padding-right: 70px;
+    background: var(--clr-white);
+  }
+
+  .dates {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+  }
+
+  .date-start,
+  .date-end {
+    height: 60px;
+    width: 78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #efefef;
+  }
+
+  .date-start {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -18px;
+      transform: translateY(-50%);
+      width: 26px;
+      height: 8px;
+      background: var(--clr-black);
+    }
+  }
+
+  .tour-duration {
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .info-btn {
+    display: block;
+    height: 60px;
+    width: 100%;
+    background: transparent;
+    border: none;
+  }
+
+  .tour-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--f-chromatica);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: var(--clr-black);
+    border: none;
+    border-radius: 5px;
+
+    &--full {
+      background-color: var(--clr-accent);
+    }
+
+    &--available {
+      background-color: var(--clr-main);
+    }
+
+    &--neither {
+      background-color: #fffa66;
+    }
+  }
+}
+
+.booking {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 471px;
+  background: var(--clr-white);
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+  overflow: hidden;
+  z-index: 100000;
+
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &__heading {
+    padding: 38px 36px;
+    background: var(--clr-main);
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+
+    h2 {
+      font-family: var(--f-righteous);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--clr-white);
+    }
+  }
+
+  &__content {
+    padding: 32px 36px;
+  }
+
+  &__dates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__vehicle {
+    label {
+      display: block;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+
+    p {
+      margin-top: 10px;
+      font-family: var(--f-chromatica);
+      font-size: 12px;
+      font-weight: 500;
+      color: #4a4a4a;
+
+      small {
+        color: var(--clr-main);
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+
+    svg {
+      display: block;
+      width: 25px;
+      height: 25px;
+      fill: var(--clr-white);
+    }
+  }
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input[type='number'] {
+  width: 100%;
+  height: 60px;
+  padding: 0 10px;
+  font-family: var(--f-chromatica);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--clr-black);
+  border: 1px solid var(--clr-main);
+  border-radius: 3px;
+
+  &:focus {
+    outline-color: var(--clr-main);
+    outline-width: 3px;
+  }
+}
+
+input[type='date'] {
+  height: 60px;
+  width: 108px;
+  padding: 0 10px;
+  border: 1px solid var(--clr-main);
+  border-radius: 3px;
+  font-family: var(--f-chromatica);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--clr-black);
+  text-transform: uppercase;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    outline-color: var(--clr-main);
+    outline-width: 3px;
+  }
+}
+
+label {
+  font-family: var(--f-chromatica);
+  font-size: 20px;
+  font-weight: 500;
+  color: #4a4a4a;
+  text-transform: capitalize;
+}
