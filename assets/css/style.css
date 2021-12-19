@@ -990,7 +990,7 @@ address {
 
 .videos-grid {
   display: grid;
-  grid-template-columns: repeat(3, 446px);
+  grid-template-columns: repeat(auto-fit, minmax(446px, 1fr));
   column-gap: 30px;
   row-gap: 40px;
 }
@@ -1060,6 +1060,9 @@ address {
 .title-double__text--dark {
   color: var(--clr-black);
 }
+.title-double__text--light {
+  color: var(--clr-white);
+}
 @media only screen and (min-width: 1366px) {
   .title-double__text {
     font-size: 40px;
@@ -1077,6 +1080,13 @@ address {
 }
 .title-double__decorative--dark {
   color: var(--clr-main);
+  -webkit-text-fill-color: unset;
+  -webkit-text-stroke-width: unset;
+  -webkit-text-stroke-color: unset;
+}
+.title-double__decorative--main {
+  color: var(--clr-main);
+  opacity: 0.72;
   -webkit-text-fill-color: unset;
   -webkit-text-stroke-width: unset;
   -webkit-text-stroke-color: unset;
@@ -1162,10 +1172,27 @@ address {
   color: var(--clr-main);
   text-transform: uppercase;
 }
+.banner__title--white {
+  color: var(--clr-white);
+}
 @media only screen and (min-width: 1366px) {
   .banner__title {
     font-size: 70px;
   }
+}
+.banner__soviet p {
+  font-family: var(--f-chromatica);
+  font-size: 31px;
+  font-weight: 400;
+  color: var(--clr-white);
+}
+.banner__soviet a {
+  font-family: var(--f-righteous);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--clr-white);
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .btn {
@@ -1583,6 +1610,9 @@ address {
 
 .banner {
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .banner--fullscreen {
   width: 100%;
@@ -1593,51 +1623,34 @@ address {
     height: 100vh;
   }
 }
-.banner--overlay::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99;
-  background: transparent linear-gradient(213deg, #000000ed 0%, #00000071 39%, #17121273 59%, #54545400 100%) 0% 0% no-repeat padding-box;
+.banner--third {
+  height: 300px;
 }
-.banner--about {
-  background: url(../images/GMYME2600.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+@media only screen and (min-width: 1366px) {
+  .banner--third {
+    height: 400px;
+  }
 }
-.banner--about::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99;
-  background: rgba(0, 0, 0, 0.42);
+@media only screen and (min-width: 1400px) {
+  .banner--third {
+    height: 700px;
+  }
 }
-.banner--moto-tour {
-  background: url(../images/IMG_E2407.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+.banner--contact {
+  height: 340px;
 }
-.banner--moto-tour::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99;
-  background: rgba(0, 0, 0, 0.42);
+@media only screen and (min-width: 1400px) {
+  .banner--contact {
+    height: 523px;
+  }
 }
-.banner__center {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.banner--rent-moto {
+  height: 400px;
+}
+@media only screen and (min-width: 1400px) {
+  .banner--rent-moto {
+    height: 920px;
+  }
 }
 .banner .container {
   height: 100%;
@@ -1653,6 +1666,20 @@ address {
   transform: translate(-50%, -50%);
   z-index: 100;
 }
+.banner__title--left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@media only screen and (min-width: 1366px) {
+  .banner__title--left {
+    padding-bottom: 30px;
+    text-align: right;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
 .banner__title--right {
   display: flex;
   justify-content: center;
@@ -1666,6 +1693,32 @@ address {
     justify-content: flex-end;
     align-items: flex-end;
   }
+}
+.banner__soviet {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 1366px) {
+  .banner__soviet {
+    padding-bottom: 180px;
+    justify-content: flex-end;
+  }
+}
+.banner__soviet p {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.banner__soviet a {
+  width: 171px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-main);
+  border-radius: 3px;
 }
 
 .card-horizontal {
@@ -1976,6 +2029,7 @@ address {
 .header {
   padding-block: 10px;
   z-index: 1000000000;
+  background: #4a4a4a linear-gradient(260deg, #000000ed 0%, #00000071 39%, #17121273 59%, #54545400 100%) 0% 0% no-repeat padding-box;
 }
 @media only screen and (min-width: 1400px) {
   .header {
@@ -1983,6 +2037,7 @@ address {
   }
 }
 .header--overlay {
+  background: unset;
   position: absolute;
   top: 0;
   left: 0;

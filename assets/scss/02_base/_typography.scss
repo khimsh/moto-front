@@ -69,6 +69,10 @@
       color: var(--clr-black);
     }
 
+    &--light {
+      color: var(--clr-white);
+    }
+
     @media only screen and (min-width: 1366px) {
       font-size: 40px;
     }
@@ -86,6 +90,14 @@
 
     &--dark {
       color: var(--clr-main);
+      -webkit-text-fill-color: unset;
+      -webkit-text-stroke-width: unset;
+      -webkit-text-stroke-color: unset;
+    }
+
+    &--main {
+      color: var(--clr-main);
+      opacity: 0.72;
       -webkit-text-fill-color: unset;
       -webkit-text-stroke-width: unset;
       -webkit-text-stroke-color: unset;
@@ -188,8 +200,30 @@
     color: var(--clr-main);
     text-transform: uppercase;
 
+    &--white {
+      color: var(--clr-white);
+    }
+
     @media only screen and (min-width: 1366px) {
       font-size: 70px;
+    }
+  }
+
+  &__soviet {
+    p {
+      font-family: var(--f-chromatica);
+      font-size: 31px;
+      font-weight: 400;
+      color: var(--clr-white);
+    }
+
+    a {
+      font-family: var(--f-righteous);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--clr-white);
+      text-decoration: none;
+      text-transform: uppercase;
     }
   }
 }

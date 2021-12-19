@@ -11,7 +11,7 @@
 
 .videos-grid {
   display: grid;
-  grid-template-columns: repeat(3, 446px);
+  grid-template-columns: repeat(auto-fit, minmax(446px, 1fr));
   column-gap: 30px;
   row-gap: 40px;
 }

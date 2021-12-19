@@ -12,75 +12,103 @@
     <script src="assets/js/script.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
+    <header class="header header--overlay">
+      <div class="container header__container">
         <a href="/" class="logo" aria-label="Return to homepage">
           <img src="assets/images/logo-trans.png" alt="Mototravel Logo" />
         </a>
 
         <nav class="navigation">
+          <button class="navigation__close" aria-label="close navigation">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 352 512"
+            >
+              <path
+                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+              ></path>
+            </svg>
+          </button>
+
           <ul class="navigation__list">
             <li class="navigation__item">
               <a href="#" class="navigation__link">about us</a>
             </li>
-            <li class="navigation__item">
-              <button class="navigation__link" data-nav-dropdown-trigger>
+            <li class="navigation__item" data-nav-dropdown-trigger>
+              <button class="navigation__link">
                 <span> motorcycles </span>
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="11.874"
-                  height="10.624"
-                  viewBox="0 0 11.874 10.624"
+                  width="14.375"
+                  height="12.5"
+                  viewBox="0 0 14.375 12.5"
                 >
-                  <path
-                    id="Path_386"
-                    data-name="Path 386"
-                    d="M20.312,12.438a.625.625,0,0,0-.625-.625H11.563a3.125,3.125,0,0,0-3.125,3.125v6.875a.625.625,0,0,0,1.25,0V14.938a1.875,1.875,0,0,1,1.875-1.875h8.124A.625.625,0,0,0,20.312,12.438Z"
-                    transform="translate(-8.438 -11.813)"
-                    fill="#fff"
-                    fill-rule="evenodd"
-                  />
+                  <g transform="translate(19.436 -8.438) rotate(90)">
+                    <path
+                      d="M22.119,5.245a.625.625,0,0,0,0,.885l3.309,3.308-3.309,3.308A.626.626,0,0,0,23,13.63l3.75-3.75a.625.625,0,0,0,0-.885L23,5.245a.625.625,0,0,0-.885,0Z"
+                      transform="translate(-5.999)"
+                      fill="#fff"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M20.312,12.438a.625.625,0,0,0-.625-.625H11.563a3.125,3.125,0,0,0-3.125,3.125v6.875a.625.625,0,0,0,1.25,0V14.938a1.875,1.875,0,0,1,1.875-1.875h8.124A.625.625,0,0,0,20.312,12.438Z"
+                      transform="translate(0 -3.001)"
+                      fill="#fff"
+                      fill-rule="evenodd"
+                    />
+                  </g>
                 </svg>
               </button>
 
               <div data-nav-dropdown-content>
-                <ul class="nav__dropdown">
-                  <li class="nav__dropdown__item">
-                    <a href="#" class="nav__dropdown__link">tours</a>
+                <ul class="navigation__dropdown">
+                  <li class="navigation__dropdown__item">
+                    <a href="#" class="navigation__dropdown__link">tours</a>
                   </li>
 
-                  <li class="nav__dropdown__item">
-                    <a href="#" class="nav__dropdown__link">rent</a>
+                  <li class="navigation__dropdown__item">
+                    <a href="#" class="navigation__dropdown__link">rent</a>
                   </li>
                 </ul>
               </div>
             </li>
-            <li class="navigation__item">
-              <button class="navigation__link" data-nav-dropdown-trigger>
+            <li class="navigation__item" data-nav-dropdown-trigger>
+              <button class="navigation__link">
                 <span> cars </span>
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="11.874"
-                  height="10.624"
-                  viewBox="0 0 11.874 10.624"
+                  width="14.375"
+                  height="12.5"
+                  viewBox="0 0 14.375 12.5"
                 >
-                  <path
-                    id="Path_386"
-                    data-name="Path 386"
-                    d="M20.312,12.438a.625.625,0,0,0-.625-.625H11.563a3.125,3.125,0,0,0-3.125,3.125v6.875a.625.625,0,0,0,1.25,0V14.938a1.875,1.875,0,0,1,1.875-1.875h8.124A.625.625,0,0,0,20.312,12.438Z"
-                    transform="translate(-8.438 -11.813)"
-                    fill="#fff"
-                    fill-rule="evenodd"
-                  />
+                  <g transform="translate(19.436 -8.438) rotate(90)">
+                    <path
+                      d="M22.119,5.245a.625.625,0,0,0,0,.885l3.309,3.308-3.309,3.308A.626.626,0,0,0,23,13.63l3.75-3.75a.625.625,0,0,0,0-.885L23,5.245a.625.625,0,0,0-.885,0Z"
+                      transform="translate(-5.999)"
+                      fill="#fff"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M20.312,12.438a.625.625,0,0,0-.625-.625H11.563a3.125,3.125,0,0,0-3.125,3.125v6.875a.625.625,0,0,0,1.25,0V14.938a1.875,1.875,0,0,1,1.875-1.875h8.124A.625.625,0,0,0,20.312,12.438Z"
+                      transform="translate(0 -3.001)"
+                      fill="#fff"
+                      fill-rule="evenodd"
+                    />
+                  </g>
                 </svg>
               </button>
 
               <div data-nav-dropdown-content>
-                <ul class="nav__dropdown">
-                  <li class="nav__dropdown__item">
-                    <button href="#" class="nav__dropdown__link">
+                <ul class="navigation__dropdown">
+                  <li
+                    class="navigation__dropdown__item"
+                    data-drop-right-trigger
+                  >
+                    <button class="navigation__dropdown__link">
                       <span> Soviet cars </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -118,15 +146,22 @@
                       </svg>
                     </button>
 
-                    <ul>
-                      <li>
-                        <a href="#">tours</a>
-                      </li>
-                    </ul>
+                    <div data-drop-right>
+                      <ul class="navigation__dropdown">
+                        <li class="navigation__dropdown__item">
+                          <a href="#" class="navigation__dropdown__link"
+                            >tours</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
                   </li>
 
-                  <li class="nav__dropdown__item">
-                    <button href="#" class="nav__dropdown__link">
+                  <li
+                    class="navigation__dropdown__item"
+                    data-drop-right-trigger
+                  >
+                    <button class="navigation__dropdown__link">
                       <span> 4X4 </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -164,14 +199,20 @@
                       </svg>
                     </button>
 
-                    <ul>
-                      <li>
-                        <a href="#">tours</a>
-                      </li>
-                      <li>
-                        <a href="#">rent</a>
-                      </li>
-                    </ul>
+                    <div data-drop-right>
+                      <ul class="navigation__dropdown">
+                        <li class="navigation__dropdown__item">
+                          <a href="#" class="navigation__dropdown__link"
+                            >tours</a
+                          >
+                        </li>
+                        <li class="navigation__dropdown__item">
+                          <a href="#" class="navigation__dropdown__link"
+                            >rent</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -189,44 +230,33 @@
         </nav>
 
         <div class="cart">
-          <div class="cart__link">
+          <a href="#" class="cart__link">
             <span class="cart__items">12</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="43.627"
-              height="41.925"
-              viewBox="0 0 43.627 41.925"
-            >
-              <g id="shopping-cart-line" transform="translate(-2.7 -2.575)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.627 41.925">
+              <g transform="translate(-2.7 -2.575)">
                 <path
-                  id="Path_381"
-                  data-name="Path 381"
                   d="M17.492,30.706A3.206,3.206,0,1,1,14.286,27.5a3.206,3.206,0,0,1,3.206,3.206Z"
                   transform="translate(3.56 10.588)"
-                  fill="#fff"
                 />
                 <path
-                  id="Path_382"
-                  data-name="Path 382"
                   d="M31.162,30.706A3.206,3.206,0,1,1,27.956,27.5,3.206,3.206,0,0,1,31.162,30.706Z"
                   transform="translate(9.367 10.588)"
-                  fill="#fff"
                 />
                 <path
-                  id="Path_383"
-                  data-name="Path 383"
                   d="M45.986,6.557a1.425,1.425,0,0,0-1.1-.527H15.224l.926,2.85H43.022l-3.8,17.1H17.846L11.334,5.36a1.425,1.425,0,0,0-.94-.926l-5.842-1.8a1.431,1.431,0,1,0-.841,2.736L8.827,6.942l6.54,20.66L13.03,29.511l-.185.185a3.79,3.79,0,0,0-.114,4.83,3.918,3.918,0,0,0,3.22,1.425h23.78a1.425,1.425,0,1,0,0-2.85H15.723a.955.955,0,0,1-.8-1.425l3.434-2.85h22a1.425,1.425,0,0,0,1.425-1.111L46.3,7.768a1.425,1.425,0,0,0-.313-1.211Z"
                   transform="translate(0)"
-                  fill="#fff"
                 />
               </g>
             </svg>
-          </div>
+          </a>
         </div>
       </div>
     </header>
 
-    <section class="banner banner--tour">
+    <section
+      class="banner banner--third"
+      style="background-image: url(assets/images/backgrounds/moto-tours-bg.jpg)"
+    >
       <div class="container">
         <h1 class="banner__title banner__title--left">6 Day Luxury Tour</h1>
       </div>
@@ -549,7 +579,7 @@
             </ul>
 
             <div class="footer__logo">
-              <img src="assets/images/logo-trans.png" alt="" />
+              <img src="assets/images/logo-trans-footer.png" alt="" />
             </div>
           </div>
 
@@ -558,7 +588,7 @@
 
             <div class="footer__blog-entries">
               <div class="footer__blog-entry">
-                <h3>4x4 Winter</h3>
+                <h3><a href="#">4x4 Winter</a></h3>
                 <div>
                   <p>In 4x4tours</p>
                   <time>January 30, 2020</time>
@@ -566,7 +596,7 @@
               </div>
 
               <div class="footer__blog-entry">
-                <h3>4x4 Winter</h3>
+                <h3><a href="#">4x4 Winter</a></h3>
                 <div>
                   <p>In 4x4tours</p>
                   <time>January 30, 2020</time>
@@ -574,7 +604,7 @@
               </div>
 
               <div class="footer__blog-entry">
-                <h3>4x4 Winter</h3>
+                <h3><a href="#">4x4 Winter</a></h3>
                 <div>
                   <p>In 4x4tours</p>
                   <time>January 30, 2020</time>
@@ -613,7 +643,9 @@
             </div>
 
             <div class="footer__disclaimer">
-              <p>Created By <a href="#">Proservice</a></p>
+              <p class="footer__created-by">
+                Created By <a href="#">Proservice</a>
+              </p>
 
               <p class="footer__copy">
                 All Rights Reserved &copy; 2021 MotorTravelTbilisi
@@ -626,24 +658,14 @@
 
     <button class="scroll-top" aria-label="scroll to top" data-scroll-top>
       <svg
+        aria-hidden="true"
+        focusable="false"
         xmlns="http://www.w3.org/2000/svg"
-        width="30.637"
-        height="30.637"
-        viewBox="0 0 30.637 30.637"
+        viewBox="0 0 448 512"
       >
-        <g
-          id="arrow-right-square-fill"
-          transform="translate(0 30.638) rotate(-90)"
-        >
-          <path
-            id="Path_5"
-            data-name="Path 5"
-            d="M3.83,0A3.83,3.83,0,0,0,0,3.83V26.808a3.83,3.83,0,0,0,3.83,3.83H26.808a3.83,3.83,0,0,0,3.83-3.83V3.83A3.83,3.83,0,0,0,26.808,0ZM14.641,20.386A.959.959,0,1,0,16,21.742L21.742,16a.957.957,0,0,0,0-1.356L16,8.9a.959.959,0,1,0-1.356,1.356l4.111,4.109H9.574a.957.957,0,0,0,0,1.915h9.178l-4.111,4.11Z"
-            transform="translate(0 0)"
-            fill="#2bc492"
-            fill-rule="evenodd"
-          />
-        </g>
+        <path
+          d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+        ></path>
       </svg>
     </button>
   </body>

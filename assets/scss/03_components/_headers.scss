@@ -1,12 +1,22 @@
 .header {
   padding-block: 10px;
   z-index: 1000000000;
+  background: #4a4a4a
+    linear-gradient(
+      260deg,
+      #000000ed 0%,
+      #00000071 39%,
+      #17121273 59%,
+      #54545400 100%
+    )
+    0% 0% no-repeat padding-box;
 
   @media only screen and (min-width: 1400px) {
     padding-block: 34px;
   }
 
   &--overlay {
+    background: unset;
     position: absolute;
     top: 0;
     left: 0;

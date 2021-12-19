@@ -1,5 +1,8 @@
 .banner {
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   &--fullscreen {
     width: 100%;
@@ -10,66 +13,32 @@
     }
   }
 
-  &--overlay {
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 99;
-      background: transparent
-        linear-gradient(
-          213deg,
-          #000000ed 0%,
-          #00000071 39%,
-          #17121273 59%,
-          #54545400 100%
-        )
-        0% 0% no-repeat padding-box;
+  &--third {
+    height: 300px;
+
+    @media only screen and (min-width: 1366px) {
+      height: 400px;
+    }
+
+    @media only screen and (min-width: 1400px) {
+      height: 700px;
     }
   }
 
-  &--about {
-    background: url(../images/GMYME2600.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  &--contact {
+    height: 340px;
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 99;
-      background: hsl(0 0% 0% / 0.42);
+    @media only screen and (min-width: 1400px) {
+      height: 523px;
     }
   }
 
-  &--moto-tour {
-    background: url(../images/IMG_E2407.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  &--rent-moto {
+    height: 400px;
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 99;
-      background: hsl(0 0% 0% / 0.42);
+    @media only screen and (min-width: 1400px) {
+      height: 920px;
     }
-  }
-
-  &__center {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .container {
@@ -89,6 +58,20 @@
       z-index: 100;
     }
 
+    &--left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      @media only screen and (min-width: 1366px) {
+        padding-bottom: 30px;
+        text-align: right;
+        justify-content: flex-start;
+        align-items: flex-end;
+      }
+    }
+
     &--right {
       display: flex;
       justify-content: center;
@@ -101,6 +84,34 @@
         justify-content: flex-end;
         align-items: flex-end;
       }
+    }
+  }
+
+  &__soviet {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (min-width: 1366px) {
+      padding-bottom: 180px;
+      justify-content: flex-end;
+    }
+
+    p {
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    a {
+      width: 171px;
+      height: 56px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--clr-main);
+      border-radius: 3px;
     }
   }
 }
