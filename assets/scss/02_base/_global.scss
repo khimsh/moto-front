@@ -180,14 +180,27 @@ button {
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 1fr 800px;
-    column-gap: 30px;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+
+    @media only screen and (min-width: 992px) {
+      grid-template-columns: 40% 60%;
+      column-gap: 30px;
+    }
+
+    @media only screen and (min-width: 1400px) {
+      grid-template-columns: 1fr 800px;
+    }
   }
 
   &__video {
     position: relative;
     align-self: end;
-    height: 452px;
+    // height: 452px;
+
+    video {
+      aspect-ratio: 16 / 9;
+    }
 
     button {
       position: absolute;
@@ -221,6 +234,7 @@ button {
 }
 
 .play-icon {
+  flex-shrink: 0;
   display: grid;
   place-content: center;
   border: 2px solid var(--clr-main);

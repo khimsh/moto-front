@@ -90,8 +90,31 @@
 .scroll-top {
   position: fixed;
   bottom: 42px;
-  right: calc((100vw - 1398px) / 2);
-  background-color: transparent;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-main);
   border: none;
+  border-radius: 3px;
   z-index: 1000;
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover,
+  &:active {
+    background-color: var(--clr-white);
+  }
+
+  @media only screen and (min-width: 1400px) {
+    right: calc((100vw - 1398px) / 2);
+  }
+
+  svg {
+    display: block;
+    width: 16px;
+    height: 15px;
+    fill: var(--clr-black);
+  }
 }

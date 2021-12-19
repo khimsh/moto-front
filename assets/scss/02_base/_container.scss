@@ -1,6 +1,12 @@
 .container {
-  margin: 0 auto;
-  width: 1398px;
+  width: 100%;
+  padding-inline: 50px;
+
+  @media only screen and (min-width: 1400px) {
+    padding: unset;
+    margin: 0 auto;
+    width: 1398px;
+  }
 }
 
 .videos-grid {
