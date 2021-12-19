@@ -2,10 +2,6 @@
   padding-block: 55px;
   background-color: var(--clr-main);
 
-  font-family: var(--f-chromatica);
-  font-weight: 500;
-  color: var(--clr-black);
-
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -40,11 +36,6 @@
 
   &__title {
     margin-bottom: 30px;
-    font-family: var(--f-righteous);
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--clr-black);
-    text-transform: uppercase;
   }
 
   address {
@@ -52,12 +43,6 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    font-style: normal;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
   }
 
   &__social {
@@ -92,15 +77,6 @@
 
     h3 {
       margin-bottom: 20px;
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-    }
-
-    time {
-      color: var(--clr-white);
     }
   }
 
@@ -110,21 +86,11 @@
       flex-direction: column;
       gap: 20px;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
   }
 
   &__sales {
     h3 {
       margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-
-    p {
-      line-height: 26px;
     }
   }
 
@@ -134,16 +100,5 @@
 
   &__created-by {
     margin-bottom: 15px;
-    font-size: 14px;
-
-    a {
-      font-size: 16px;
-      color: var(--clr-white);
-      text-decoration: none;
-    }
-  }
-
-  &__copy {
-    font-size: 12px;
   }
 }

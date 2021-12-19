@@ -1,6 +1,10 @@
 .header {
-  padding-block: 34px;
-  z-index: 100;
+  padding-block: 10px;
+  z-index: 1000000000;
+
+  @media only screen and (min-width: 1400px) {
+    padding-block: 34px;
+  }
 
   &--overlay {
     position: absolute;
@@ -30,10 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: var(--f-chromatica);
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--clr-white);
+
     background-color: var(--clr-main);
     border-radius: 24px;
     transform: translateX(3px);

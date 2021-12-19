@@ -4,6 +4,7 @@
 @use './02_base/global';
 @use './02_base/variables';
 @use './02_base/container';
+@use './02_base/typography';
 
 @use './03_components/calendar';
 @use './03_components/our-team';
@@ -13,12 +14,14 @@
 @use './03_components/footer';
 @use './03_components/headers';
 @use './03_components/navigation';
-@use './03_components/schedual';
+@use './03_components/schedule.scss';
 @use './03_components/video';
 @use './03_components/moto';
 @use './03_components/faq';
 @use './03_components/tabs';
+@use './03_components/form-elements';
 @use './03_components/contact-form';
+@use './03_components/booking';
 @use './03_components/pagination';
 
 @use './04_pages/moto-tour';

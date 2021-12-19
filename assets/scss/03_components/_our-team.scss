@@ -2,15 +2,6 @@
   margin-top: 30px;
   margin-bottom: 94px;
 
-  &__title {
-    font-family: var(--f-righteous);
-    font-size: 63px;
-    font-weight: 400;
-    color: var(--clr-main);
-    text-align: center;
-    text-transform: uppercase;
-  }
-
   &__grid {
     margin-top: 40px;
     display: grid;
@@ -47,40 +38,11 @@
     border-bottom: 1px solid #053727;
   }
 
-  &__name {
-    font-family: var(--f-righteous);
-    font-size: 30px;
-    font-weight: 400;
-    color: var(--clr-white);
-    text-transform: uppercase;
-  }
-
-  &__job {
-    font-family: var(--f-righteous);
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--clr-main);
-    text-transform: uppercase;
-  }
-
   &__highlight {
     margin-bottom: 20px;
-    font-family: var(--f-righteous);
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--clr-white);
-    opacity: 0.73;
-    text-transform: uppercase;
   }
 
-  &__bio {
-    font-family: var(--f-chromatica);
-    font-size: 16px;
-    font-weight: 500;
-    color: hsl(176, 7%, 42%);
-    line-height: 17px;
-  }
-
+  // TODO: ცალკეა გამოსატანი იმიტომ რომ კონტაქტის გვერდზეც არის
   &__social {
     margin-top: 30px;
     display: flex;

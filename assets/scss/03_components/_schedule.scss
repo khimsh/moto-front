@@ -1,0 +1,144 @@
+.schedule {
+  &__date {
+    margin-bottom: 30px;
+  }
+}
+
+.date-info {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+
+  & > div {
+    width: 78px;
+  }
+}
+
+.schedule-list {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.schedule-item {
+  display: grid;
+  grid-template-columns: 166px 1fr 78px 1fr;
+  column-gap: 20px;
+
+  @media only screen and (min-width: 1366px) {
+    grid-template-columns: 166px 1fr 78px 298px;
+    column-gap: 30px;
+  }
+
+  & > div {
+    background: #efefef;
+    border-radius: 5px;
+  }
+
+  .tour-info {
+    position: relative;
+  }
+
+  &__additional-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    background: var(--clr-white);
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+
+    display: none;
+
+    @media only screen and (min-width: 1400px) {
+      width: 873px;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+    }
+
+    .texts {
+      padding-right: 20px;
+    }
+  }
+
+  .dates {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+  }
+
+  .date-start,
+  .date-end {
+    height: 60px;
+    width: 78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #efefef;
+  }
+
+  .date-start {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -18px;
+      transform: translateY(-50%);
+      width: 26px;
+      height: 8px;
+      background: var(--clr-black);
+    }
+  }
+
+  .tour-duration {
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .info-btn {
+    display: block;
+    height: 60px;
+    width: 100%;
+    background: transparent;
+    border: none;
+  }
+
+  .tour-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--clr-black);
+    border: none;
+    border-radius: 5px;
+
+    &--full {
+      background-color: var(--clr-accent);
+    }
+
+    &--available {
+      background-color: var(--clr-main);
+    }
+
+    &--neither {
+      background-color: #fffa66;
+    }
+  }
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
