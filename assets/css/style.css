@@ -733,9 +733,16 @@ address {
 }
 .choose-vehicle__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 410px;
-  column-gap: 30px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 410px 410px;
+  row-gap: 30px;
+}
+@media only screen and (min-width: 992px) {
+  .choose-vehicle__container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 410px;
+    column-gap: 30px;
+  }
 }
 .choose-vehicle__moto, .choose-vehicle__auto {
   position: relative;
@@ -751,10 +758,10 @@ address {
   max-width: 10ch;
 }
 .choose-vehicle__moto {
-  background: url(../images/choose-moto.jpg);
+  background-image: url(../images/choose-moto.jpg);
 }
 .choose-vehicle__auto {
-  background: url(../images/choose-auto.jpg), rgba(0, 0, 0, 0.34);
+  background-image: url(../images/choose-auto.jpg);
 }
 
 .about-us__texts {
@@ -861,7 +868,15 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
+}
+@media only screen and (min-width: 992px) {
+  .btn-group {
+    gap: 30px;
+  }
+}
+.btn-group--left {
+  justify-content: flex-start;
 }
 
 .divider {
@@ -978,7 +993,12 @@ address {
 
 .container {
   width: 100%;
-  padding-inline: 50px;
+  padding-inline: 15px;
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    padding-inline: 50px;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .container {
@@ -1051,11 +1071,12 @@ address {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--f-righteous);
-  font-size: 5vw;
+  font-size: 6vw;
   color: var(--clr-white);
   text-transform: uppercase;
   text-align: center;
   z-index: 1;
+  white-space: nowrap;
 }
 .title-double__text--dark {
   color: var(--clr-black);
@@ -1071,7 +1092,7 @@ address {
 .title-double__decorative {
   display: block;
   font-family: var(--f-gothic);
-  font-size: 10vw;
+  font-size: 11vw;
   text-align: center;
   opacity: 0.24;
   -webkit-text-fill-color: transparent;
@@ -1344,7 +1365,12 @@ address {
 }
 .navigation__link:hover, .navigation__link:focus {
   outline: none;
-  color: var(--clr-main);
+  color: var(--clr-black);
+}
+@media only screen and (min-width: 1366px) {
+  .navigation__link:hover, .navigation__link:focus {
+    color: var(--clr-main);
+  }
 }
 @media only screen and (min-width: 1366px) {
   .navigation__link {
@@ -1358,11 +1384,21 @@ address {
   text-transform: uppercase;
   text-decoration: none;
   text-align: left;
+  transition: all 0.15s ease-in-out;
 }
 @media only screen and (min-width: 1366px) {
   .navigation__dropdown__link {
     font-size: 20px;
     text-align: center;
+  }
+}
+.navigation__dropdown__link:hover, .navigation__dropdown__link:focus {
+  outline: none;
+  color: var(--clr-black);
+}
+@media only screen and (min-width: 1366px) {
+  .navigation__dropdown__link:hover, .navigation__dropdown__link:focus {
+    color: var(--clr-white);
   }
 }
 
@@ -1432,17 +1468,39 @@ address {
 
 .schedule-item > div {
   font-family: var(--f-chromatica);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
+}
+@media only screen and (min-width: 1366px) {
+  .schedule-item > div {
+    font-size: 20px;
+  }
 }
 .schedule-item__additional-info .texts p {
   font-size: 12px;
 }
 .schedule-item .tour-state {
   font-family: var(--f-chromatica);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
+}
+@media only screen and (min-width: 1366px) {
+  .schedule-item .tour-state {
+    font-size: 20px;
+  }
+}
+
+.included {
+  font-family: var(--f-chromatica);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--clr-black);
+}
+@media only screen and (min-width: 1366px) {
+  .included {
+    font-size: 20px;
+  }
 }
 
 .calendar-container {
@@ -1616,7 +1674,7 @@ address {
 }
 .banner--fullscreen {
   width: 100%;
-  height: 400px;
+  height: 600px;
 }
 @media only screen and (min-width: 1366px) {
   .banner--fullscreen {
@@ -1671,6 +1729,7 @@ address {
   justify-content: center;
   align-items: center;
   height: 100%;
+  text-align: center;
 }
 @media only screen and (min-width: 1366px) {
   .banner__title--left {
@@ -1685,6 +1744,7 @@ address {
   justify-content: center;
   align-items: center;
   height: 100%;
+  text-align: center;
 }
 @media only screen and (min-width: 1366px) {
   .banner__title--right {
@@ -1867,31 +1927,50 @@ address {
 }
 
 .btn-main {
-  height: 58px;
-  padding: 0 22px;
+  height: 40px;
+  padding: 0 14px;
   font-family: var(--f-righteous);
-  font-size: 20px;
+  font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
   background: var(--clr-main);
   border: none;
 }
+@media only screen and (min-width: 992px) {
+  .btn-main {
+    height: 58px;
+    font-size: 20px;
+    padding: 0 22px;
+  }
+}
 
 .btn-outline {
-  height: 58px;
-  padding: 0 22px;
+  height: 40px;
+  padding: 0 14px;
   font-family: var(--f-righteous);
-  font-size: 20px;
+  font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
   background: transparent;
   border: 1px solid var(--clr-main);
 }
+@media only screen and (min-width: 992px) {
+  .btn-outline {
+    height: 58px;
+    font-size: 20px;
+    padding: 0 22px;
+  }
+}
 
 .btn-icon {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 8px;
+}
+@media only screen and (min-width: 992px) {
+  .btn-icon {
+    gap: 20px;
+  }
 }
 .btn-icon svg {
   display: block;
@@ -1912,7 +1991,7 @@ address {
 .scroll-top {
   position: fixed;
   bottom: 42px;
-  right: 50px;
+  right: 15px;
   width: 30px;
   height: 30px;
   display: flex;
@@ -1926,6 +2005,11 @@ address {
 }
 .scroll-top:hover, .scroll-top:active {
   background-color: var(--clr-white);
+}
+@media only screen and (min-width: 992px) {
+  .scroll-top {
+    right: 50px;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .scroll-top {
@@ -2048,6 +2132,44 @@ address {
   justify-content: space-between;
   align-items: center;
 }
+.header__menu-btn {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  margin-right: 10px;
+}
+.header__menu-btn:hover, .header__menu-btn:focus {
+  outline: none;
+}
+.header__menu-btn:hover svg, .header__menu-btn:focus svg {
+  fill: var(--clr-main);
+}
+.header__menu-btn svg {
+  display: block;
+  width: 34px;
+  height: 34px;
+  fill: var(--clr-white);
+  transition: fill 0.15s ease-in-out;
+}
+@media only screen and (min-width: 1366px) {
+  .header__menu-btn {
+    display: none;
+  }
+}
+.header .logo {
+  max-width: 180px;
+}
+@media only screen and (min-width: 992px) {
+  .header .logo {
+    max-width: unset;
+  }
+}
+.header .logo img {
+  width: 100%;
+  height: auto;
+}
 
 .cart__link {
   display: flex;
@@ -2056,8 +2178,8 @@ address {
   text-decoration: none;
 }
 .cart__items {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2065,27 +2187,41 @@ address {
   border-radius: 24px;
   transform: translateX(3px);
 }
+@media only screen and (min-width: 992px) {
+  .cart__items {
+    width: 24px;
+    height: 24px;
+  }
+}
 .cart svg {
   display: block;
-  width: 43.627px;
-  height: 41.925px;
+  width: 30px;
+  height: 28px;
   fill: var(--clr-white);
+}
+@media only screen and (min-width: 992px) {
+  .cart svg {
+    width: 43.627px;
+    height: 41.925px;
+  }
 }
 
 .navigation {
   position: fixed;
   top: 0;
   right: 0;
-  width: 400px;
+  width: 0;
   height: 100vh;
-  padding: 30px;
+  min-height: 500px;
+  padding: 0;
   background-color: var(--clr-main);
   z-index: 100000;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  display: none;
+  transition: all 0.15s ease-in-out;
 }
 .navigation.active {
-  display: block;
+  width: 300px;
+  padding: 30px;
 }
 @media only screen and (min-width: 1366px) {
   .navigation {
@@ -2097,6 +2233,7 @@ address {
     background-color: transparent;
     box-shadow: unset;
     display: block;
+    min-height: unset;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -2201,8 +2338,10 @@ address {
   fill: var(--clr-white);
 }
 
-[data-nav-dropdown-trigger] {
-  padding-bottom: 20px;
+@media only screen and (min-width: 1366px) {
+  [data-nav-dropdown-trigger] {
+    padding-bottom: 20px;
+  }
 }
 
 [data-nav-dropdown-trigger]:focus > [data-nav-dropdown-content],
@@ -2242,11 +2381,29 @@ address {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding-bottom: 20px;
+  overflow-x: auto;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.schedule-list::-webkit-scrollbar {
+  height: 6px;
+}
+.schedule-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.schedule-list::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.schedule-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .schedule-item {
   display: grid;
-  grid-template-columns: 166px 1fr 78px 1fr;
+  grid-template-columns: 126px 200px 58px 140px;
   column-gap: 20px;
 }
 @media only screen and (min-width: 1366px) {
@@ -2294,12 +2451,19 @@ address {
 }
 .schedule-item .date-start,
 .schedule-item .date-end {
-  height: 60px;
-  width: 78px;
+  height: 40px;
+  width: 58px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #efefef;
+}
+@media only screen and (min-width: 1366px) {
+  .schedule-item .date-start,
+.schedule-item .date-end {
+    height: 60px;
+    width: 78px;
+  }
 }
 .schedule-item .date-start {
   position: relative;
@@ -2315,17 +2479,27 @@ address {
   background: var(--clr-black);
 }
 .schedule-item .tour-duration {
-  height: 60px;
+  height: 40px;
   padding: 0 30px;
   display: flex;
   align-items: center;
 }
+@media only screen and (min-width: 1366px) {
+  .schedule-item .tour-duration {
+    height: 60px;
+  }
+}
 .schedule-item .info-btn {
   display: block;
-  height: 60px;
+  height: 40px;
   width: 100%;
   background: transparent;
   border: none;
+}
+@media only screen and (min-width: 1366px) {
+  .schedule-item .info-btn {
+    height: 60px;
+  }
 }
 .schedule-item .tour-state {
   display: flex;
@@ -2443,6 +2617,9 @@ address {
   align-items: center;
   gap: 30px;
 }
+.faq__trigger.active .faq__icon::before {
+  transform: scaleY(0) translateX(-50%);
+}
 .faq__icon {
   position: relative;
   width: 26px;
@@ -2453,11 +2630,13 @@ address {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
   width: 8px;
   height: 100%;
   background-color: var(--clr-main);
   border-radius: 2px;
+  transition: transform 0.2s ease-in-out;
+  transform: scaleY(1) translateX(-50%);
+  transform-origin: center;
 }
 .faq__icon::after {
   content: "";
@@ -2471,8 +2650,16 @@ address {
   border-radius: 2px;
 }
 .faq__content {
+  margin-bottom: 0;
   max-width: 952px;
   padding-left: 56px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.faq__content.active {
+  max-height: 1000px;
+  margin-bottom: 20px;
 }
 
 .faqs {
@@ -2740,10 +2927,13 @@ label {
 }
 
 .included {
-  font-family: var(--f-chromatica);
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--clr-black);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.included.active {
+  max-height: 1000px;
+  margin-top: 40px;
 }
 .included h2 {
   font-size: inherit;
@@ -2768,6 +2958,27 @@ label {
 
 .moto-tour__cards {
   margin-block: 50px;
+}
+.moto-tour .page-title {
+  margin-top: 58px;
+  margin-bottom: 15px;
+}
+.moto-tour .page-subtitle {
+  margin-bottom: 50px;
+}
+
+.schedule .page-title {
+  margin-top: 58px;
+  margin-bottom: 15px;
+}
+.schedule .page-subtitle {
+  margin-bottom: 50px;
+}
+.schedule .btn-group {
+  margin-bottom: 50px;
+}
+.schedule .title-double {
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

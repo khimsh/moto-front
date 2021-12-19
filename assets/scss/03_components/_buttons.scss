@@ -40,31 +40,47 @@
 }
 
 .btn-main {
-  height: 58px;
-  padding: 0 22px;
+  height: 40px;
+  padding: 0 14px;
   font-family: var(--f-righteous);
-  font-size: 20px;
+  font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
   background: var(--clr-main);
   border: none;
+
+  @media only screen and (min-width: 992px) {
+    height: 58px;
+    font-size: 20px;
+    padding: 0 22px;
+  }
 }
 
 .btn-outline {
-  height: 58px;
-  padding: 0 22px;
+  height: 40px;
+  padding: 0 14px;
   font-family: var(--f-righteous);
-  font-size: 20px;
+  font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
   background: transparent;
   border: 1px solid var(--clr-main);
+
+  @media only screen and (min-width: 992px) {
+    height: 58px;
+    font-size: 20px;
+    padding: 0 22px;
+  }
 }
 
 .btn-icon {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 8px;
+
+  @media only screen and (min-width: 992px) {
+    gap: 20px;
+  }
 
   svg {
     display: block;
@@ -87,7 +103,7 @@
 .scroll-top {
   position: fixed;
   bottom: 42px;
-  right: 50px;
+  right: 15px;
   width: 30px;
   height: 30px;
   display: flex;
@@ -102,6 +118,10 @@
   &:hover,
   &:active {
     background-color: var(--clr-white);
+  }
+
+  @media only screen and (min-width: 992px) {
+    right: 50px;
   }
 
   @media only screen and (min-width: 1400px) {

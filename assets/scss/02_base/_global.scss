@@ -63,9 +63,15 @@ address {
 
   &__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 410px;
-    column-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 410px 410px;
+    row-gap: 30px;
+
+    @media only screen and (min-width: 992px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 410px;
+      column-gap: 30px;
+    }
   }
 
   &__moto,
@@ -85,11 +91,11 @@ address {
   }
 
   &__moto {
-    background: url(../images/choose-moto.jpg);
+    background-image: url(../images/choose-moto.jpg);
   }
 
   &__auto {
-    background: url(../images/choose-auto.jpg), hsl(0 0% 0% / 0.34);
+    background-image: url(../images/choose-auto.jpg);
   }
 }
 
@@ -213,7 +219,15 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
+
+  @media only screen and (min-width: 992px) {
+    gap: 30px;
+  }
+
+  &--left {
+    justify-content: flex-start;
+  }
 }
 
 .divider {

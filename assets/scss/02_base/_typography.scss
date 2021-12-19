@@ -59,11 +59,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: var(--f-righteous);
-    font-size: 5vw;
+    font-size: 6vw;
     color: var(--clr-white);
     text-transform: uppercase;
     text-align: center;
     z-index: 1;
+    white-space: nowrap;
 
     &--dark {
       color: var(--clr-black);
@@ -81,7 +82,7 @@
   &__decorative {
     display: block;
     font-family: var(--f-gothic);
-    font-size: 10vw;
+    font-size: 11vw;
     text-align: center;
     opacity: 0.24;
     -webkit-text-fill-color: transparent;
@@ -421,7 +422,11 @@
     &:hover,
     &:focus {
       outline: none;
-      color: var(--clr-main);
+      color: var(--clr-black);
+
+      @media only screen and (min-width: 1366px) {
+        color: var(--clr-main);
+      }
     }
 
     @media only screen and (min-width: 1366px) {
@@ -437,10 +442,21 @@
       text-transform: uppercase;
       text-decoration: none;
       text-align: left;
+      transition: all 0.15s ease-in-out;
 
       @media only screen and (min-width: 1366px) {
         font-size: 20px;
         text-align: center;
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: var(--clr-black);
+
+        @media only screen and (min-width: 1366px) {
+          color: var(--clr-white);
+        }
       }
     }
   }
@@ -526,8 +542,12 @@
 .schedule-item {
   & > div {
     font-family: var(--f-chromatica);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
+
+    @media only screen and (min-width: 1366px) {
+      font-size: 20px;
+    }
   }
 
   &__additional-info {
@@ -540,8 +560,23 @@
 
   .tour-state {
     font-family: var(--f-chromatica);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
+
+    @media only screen and (min-width: 1366px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.included {
+  font-family: var(--f-chromatica);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--clr-black);
+
+  @media only screen and (min-width: 1366px) {
+    font-size: 20px;
   }
 }

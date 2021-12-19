@@ -2,17 +2,18 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 400px;
+  width: 0;
   height: 100vh;
-  padding: 30px;
+  min-height: 500px;
+  padding: 0;
   background-color: var(--clr-main);
   z-index: 100000;
   box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
-
-  display: none;
+  transition: all 0.15s ease-in-out;
 
   &.active {
-    display: block;
+    width: 300px;
+    padding: 30px;
   }
 
   @media only screen and (min-width: 1366px) {
@@ -24,6 +25,7 @@
     background-color: transparent;
     box-shadow: unset;
     display: block;
+    min-height: unset;
   }
 
   @media only screen and (min-width: 1400px) {
@@ -136,7 +138,9 @@
 }
 
 [data-nav-dropdown-trigger] {
-  padding-bottom: 20px;
+  @media only screen and (min-width: 1366px) {
+    padding-bottom: 20px;
+  }
 }
 
 [data-nav-dropdown-trigger]:focus > [data-nav-dropdown-content],

@@ -17,6 +17,12 @@
     display: flex;
     align-items: center;
     gap: 30px;
+
+    &.active {
+      .faq__icon::before {
+        transform: scaleY(0) translateX(-50%);
+      }
+    }
   }
 
   &__icon {
@@ -29,11 +35,13 @@
       position: absolute;
       top: 0;
       left: 50%;
-      transform: translateX(-50%);
       width: 8px;
       height: 100%;
       background-color: var(--clr-main);
       border-radius: 2px;
+      transition: transform 0.2s ease-in-out;
+      transform: scaleY(1) translateX(-50%);
+      transform-origin: center;
     }
 
     &::after {
@@ -50,9 +58,17 @@
   }
 
   &__content {
+    margin-bottom: 0;
     max-width: 952px;
     padding-left: 56px;
-    // display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+
+    &.active {
+      max-height: 1000px;
+      margin-bottom: 20px;
+    }
   }
 }
 

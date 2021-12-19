@@ -1,8 +1,12 @@
 .included {
-  font-family: var(--f-chromatica);
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--clr-black);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+
+  &.active {
+    max-height: 1000px;
+    margin-top: 40px;
+  }
 
   h2 {
     font-size: inherit;
@@ -39,4 +43,17 @@
   &__cards {
     margin-block: 50px;
   }
+
+  .page-title {
+    margin-top: 58px;
+    margin-bottom: 15px;
+  }
+
+  .page-subtitle {
+    margin-bottom: 50px;
+  }
+
+  // .btn-group {
+  //   margin-bottom: 40px;
+  // }
 }

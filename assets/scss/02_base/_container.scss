@@ -1,6 +1,10 @@
 .container {
   width: 100%;
-  padding-inline: 50px;
+  padding-inline: 15px;
+
+  @media only screen and (min-width: 992px) {
+    padding-inline: 50px;
+  }
 
   @media only screen and (min-width: 1400px) {
     padding: unset;
