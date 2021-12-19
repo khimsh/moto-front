@@ -337,3 +337,49 @@ address {
     column-gap: 30px;
   }
 }
+
+.social-menu {
+  margin-top: 30px;
+  display: flex;
+  gap: 22px;
+
+  &--white {
+    a {
+      border-color: var(--clr-white) !important;
+    }
+    svg {
+      fill: var(--clr-white) !important;
+    }
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 67px;
+    height: 67px;
+    border: 1px solid var(--clr-main);
+    border-radius: 67px;
+    text-decoration: none;
+  }
+
+  svg {
+    display: block;
+    fill: var(--clr-main);
+  }
+
+  &__facebook {
+    width: 17.235px;
+    height: 31.5px;
+  }
+
+  &__insta {
+    width: 31.5px;
+    height: 31.5px;
+  }
+}
+
+#map {
+  height: 473px;
+  background-color: #fff;
+}

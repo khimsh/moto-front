@@ -41,22 +41,4 @@
   &__highlight {
     margin-bottom: 20px;
   }
-
-  // TODO: ცალკეა გამოსატანი იმიტომ რომ კონტაქტის გვერდზეც არის
-  &__social {
-    margin-top: 30px;
-    display: flex;
-    gap: 22px;
-
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 67px;
-      height: 67px;
-      border: 1px solid var(--clr-main);
-      border-radius: 67px;
-      text-decoration: none;
-    }
-  }
 }
