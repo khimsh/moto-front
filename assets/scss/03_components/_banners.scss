@@ -41,6 +41,16 @@
     }
   }
 
+  &__center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .about-us__texts {
+      padding-top: 10%;
+    }
+  }
+
   .container {
     height: 100%;
   }

@@ -764,31 +764,58 @@ address {
   background-image: url(../images/choose-auto.jpg);
 }
 
+.about-us {
+  padding: 65px 0 100px 0;
+}
 .about-us__texts {
   max-width: 913px;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 100px;
   position: relative;
   z-index: 100000;
+  padding-inline: 50px;
 }
-
-.home-about-us__team {
+@media only screen and (min-width: 1366px) {
+  .about-us__texts {
+    padding-inline: unset;
+  }
+}
+.about-us__subtitle {
+  margin: 20px 0 22px 0;
+}
+@media only screen and (min-width: 992px) {
+  .about-us__subtitle {
+    margin: 40px 0 44px 0;
+  }
+}
+.about-us__team {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
-.home-about-us__team figure {
+@media only screen and (min-width: 992px) {
+  .about-us__team {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.about-us__team figure {
   position: relative;
 }
-.home-about-us__team figure img {
+.about-us__team figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.home-about-us__team figure figcaption {
+.about-us__team figure figcaption {
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media only screen and (min-width: 992px) {
+  .about-us__team figure figcaption {
+    bottom: 50px;
+  }
 }
 
 .play-icon {
@@ -1116,20 +1143,28 @@ address {
 
 .about-us__title {
   font-family: var(--f-righteous);
-  font-size: 50px;
+  font-size: 6vw;
   color: var(--clr-white);
   text-transform: uppercase;
   text-align: center;
 }
+@media only screen and (min-width: 1366px) {
+  .about-us__title {
+    font-size: 50px;
+  }
+}
 .about-us__subtitle {
-  margin: 40px 0 44px 0;
   font-family: var(--f-chromatica);
-  font-size: 20px;
+  font-size: 4vw;
   color: var(--clr-gray-2);
   text-align: center;
 }
-
-.home-about-us__team figcaption {
+@media only screen and (min-width: 1366px) {
+  .about-us__subtitle {
+    font-size: 20px;
+  }
+}
+.about-us__team figcaption {
   font-family: var(--f-righteous);
   font-size: 30px;
   color: var(--clr-white);
@@ -1410,25 +1445,41 @@ address {
 
 .team-member__name {
   font-family: var(--f-righteous);
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 400;
   color: var(--clr-white);
   text-transform: uppercase;
 }
+@media only screen and (min-width: 768px) {
+  .team-member__name {
+    font-size: 30px;
+  }
+}
 .team-member__job {
   font-family: var(--f-righteous);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--clr-main);
   text-transform: uppercase;
 }
+@media only screen and (min-width: 768px) {
+  .team-member__job {
+    font-size: 20px;
+    text-align: right;
+  }
+}
 .team-member__highlight {
   font-family: var(--f-righteous);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--clr-white);
   opacity: 0.73;
   text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  .team-member__highlight {
+    font-size: 20px;
+  }
 }
 .team-member__bio {
   font-family: var(--f-chromatica);
@@ -1618,18 +1669,27 @@ address {
 .our-team__grid {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: 1fr;
+  justify-content: center;
   grid-auto-rows: 1fr;
   row-gap: 50px;
 }
 @media only screen and (min-width: 992px) {
   .our-team__grid {
     grid-template-columns: 1fr 1fr;
+    justify-content: unset;
     column-gap: 100px;
     justify-content: space-between;
   }
 }
 
+.team-member {
+  max-width: 460px;
+}
+@media only screen and (min-width: 992px) {
+  .team-member {
+    max-width: unset;
+  }
+}
 .team-member figure img {
   width: 100%;
   height: auto;
@@ -1640,9 +1700,16 @@ address {
   margin-bottom: 20px;
   padding-bottom: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 20px;
   border-bottom: 1px solid #053727;
+}
+@media only screen and (min-width: 768px) {
+  .team-member__heading {
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 .team-member__highlight {
   margin-bottom: 20px;
@@ -1691,6 +1758,14 @@ address {
   .banner--rent-moto {
     height: 920px;
   }
+}
+.banner__center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.banner__center .about-us__texts {
+  padding-top: 10%;
 }
 .banner .container {
   height: 100%;
@@ -1963,7 +2038,13 @@ address {
 
 .btn-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .btn-container {
+    flex-direction: row;
+  }
 }
 .btn-container--center {
   justify-content: center;
