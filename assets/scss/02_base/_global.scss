@@ -474,3 +474,29 @@ body {
     }
   }
 }
+
+.tour-details {
+  margin: 0 auto;
+  margin-top: 50px;
+
+  @media only screen and (min-width: 1200px) {
+    width: 1155px;
+  }
+}
+
+.tour__details {
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 15px;
+    font-size: 18px;
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16),
+      0px 3px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  .bg-main {
+    color: var(--clr-white);
+    background-color: var(--clr-main);
+  }
+}

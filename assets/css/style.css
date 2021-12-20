@@ -572,6 +572,29 @@ body {
   background-color: rgba(255, 255, 255, 0.56);
 }
 
+.tour-details {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+@media only screen and (min-width: 1200px) {
+  .tour-details {
+    width: 1155px;
+  }
+}
+
+.tour__details > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 15px;
+  font-size: 18px;
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.tour__details .bg-main {
+  color: var(--clr-white);
+  background-color: var(--clr-main);
+}
+
 :root {
   --f-chromatica: "Chromatica";
   --f-righteous: "Righteous";
@@ -609,6 +632,18 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(446px, 1fr));
   column-gap: 30px;
   row-gap: 40px;
+}
+
+.tour__details {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 130px);
+  overflow-x: auto;
+}
+@media only screen and (min-width: 1420px) {
+  .tour__details {
+    grid-template-columns: repeat(7, 200px);
+  }
 }
 
 .page-title {
