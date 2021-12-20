@@ -273,17 +273,18 @@
       </div>
     </header>
 
-    <section class="banner banner--fullscreen">
+    <section class="banner banner--fullscreen" data-video-banner>
       <h1 class="banner__title banner__title--center">ride the dream</h1>
 
       <video
         class="video video--fullscreen"
         src="assets/videos/vid.mp4"
         poster="assets/images/backgrounds/landing-video-poster.jpg"
+        data-video
       ></video>
 
       <div class="video-controls">
-        <button>
+        <button data-video-play>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="26.9"
@@ -304,7 +305,7 @@
             </g>
           </svg>
         </button>
-        <button>
+        <button data-video-pause>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"

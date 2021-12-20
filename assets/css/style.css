@@ -574,7 +574,6 @@ body {
 
 .tour-details {
   margin: 0 auto;
-  margin-top: 50px;
 }
 @media only screen and (min-width: 1200px) {
   .tour-details {
@@ -1901,6 +1900,7 @@ body {
 }
 
 .header {
+  position: relative;
   padding-block: 10px;
   z-index: 1000000000;
   background: #4a4a4a linear-gradient(260deg, #000000ed 0%, #00000071 39%, #17121273 59%, #54545400 100%) 0% 0% no-repeat padding-box;
@@ -2048,6 +2048,11 @@ body {
     gap: 50px;
   }
 }
+@media only screen and (min-width: 1366px) {
+  .navigation__item {
+    padding-block: 20px;
+  }
+}
 .navigation__link {
   position: relative;
   display: block;
@@ -2063,7 +2068,7 @@ body {
 }
 @media only screen and (min-width: 1366px) {
   .navigation__dropdown {
-    width: 166px;
+    min-width: 166px;
   }
 }
 .navigation__dropdown__item {
@@ -2073,6 +2078,7 @@ body {
 @media only screen and (min-width: 1366px) {
   .navigation__dropdown__item {
     padding-block: 14px;
+    padding-inline: 20px;
     background: rgba(0, 0, 0, 0.5);
   }
   .navigation__dropdown__item:hover {
@@ -2126,12 +2132,6 @@ body {
   width: 24px;
   height: 24px;
   fill: var(--clr-white);
-}
-
-@media only screen and (min-width: 1366px) {
-  [data-nav-dropdown-trigger] {
-    padding-bottom: 20px;
-  }
 }
 
 [data-nav-dropdown-trigger]:focus > [data-nav-dropdown-content],

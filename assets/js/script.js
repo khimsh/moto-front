@@ -124,6 +124,24 @@ if (document.querySelectorAll('[data-faq-trigger]')) {
   });
 }
 
+// ვიდეო ბანერი
+if (document.querySelector('[data-video-banner]')) {
+  const videoBanner = document.querySelector('[data-video-banner]');
+  const video = videoBanner.querySelector('[data-video]');
+  const videoPlay = videoBanner.querySelector('[data-video-play]');
+  const videoPause = videoBanner.querySelector('[data-video-pause]');
+
+  videoPlay.addEventListener('click', () => {
+    playVideo(video);
+  });
+
+  videoPause.addEventListener('click', () => {
+    if (!video.paused) {
+      pauseVideo(video);
+    }
+  });
+}
+
 // Video Gallery
 if (document.querySelector('[data-video-src]')) {
   const videoSources = document.querySelectorAll('[data-video-src]');
