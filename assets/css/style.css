@@ -1119,22 +1119,41 @@ body {
 }
 
 .calendar-container {
-  width: 1152px;
   margin: 0 auto;
   margin-top: 50px;
-  padding-inline: 30px;
+}
+@media only screen and (min-width: 1200px) {
+  .calendar-container {
+    width: 1155px;
+  }
 }
 
-.calendar-wrapper {
-  width: 100%;
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 120px);
+  grid-template-rows: 90px 142px repeat(5, 166px);
+  overflow-x: auto;
 }
-
+@media only screen and (min-width: 1200px) {
+  .calendar {
+    grid-template-columns: repeat(7, 165px);
+  }
+}
+.calendar .span-full {
+  grid-column: 1/-1;
+}
 .calendar__heading {
-  width: 100%;
   padding: 30px 28px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px;
   background-color: var(--clr-white);
+}
+@media only screen and (min-width: 1100px) {
+  .calendar__heading {
+    justify-content: space-between;
+    gap: unset;
+  }
 }
 .calendar__heading h2 {
   font-family: var(--f-righteous);
@@ -1158,13 +1177,7 @@ body {
   height: 20px;
   fill: var(--clr-white);
 }
-.calendar__week-days {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-auto-rows: 142px;
-}
-.calendar__week-days div {
+.calendar__weekday {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1176,21 +1189,16 @@ body {
   background-color: var(--clr-main);
   box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
-.calendar__days {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5, 166px);
-}
-.calendar__days > div {
+.calendar__day {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-inline: 15px;
   background-color: var(--clr-white);
   box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
-.calendar__days > div > div p {
+.calendar__day > div p {
   font-family: var(--f-chromatica);
   font-size: 16px;
   font-weight: 500;
@@ -1198,14 +1206,14 @@ body {
   text-align: center;
   line-height: 22px;
 }
-.calendar__day {
+.calendar__date {
   margin-bottom: 20px;
   font-family: var(--f-righteous);
   font-size: 20px;
   font-weight: 400;
   color: #777777;
 }
-.calendar__day--faded {
+.calendar__date--faded {
   color: #d9d9d9;
 }
 
