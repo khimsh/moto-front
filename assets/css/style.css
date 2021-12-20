@@ -1723,7 +1723,7 @@ address {
 }
 .banner--fullscreen {
   width: 100%;
-  min-height: 500px;
+  height: 500px;
 }
 @media only screen and (min-width: 1200px) {
   .banner--fullscreen {
@@ -2451,6 +2451,11 @@ address {
   /* Handle */
   /* Handle on hover */
 }
+@media only screen and (min-width: 992px) {
+  .schedule-list {
+    overflow-x: unset;
+  }
+}
 .schedule-list::-webkit-scrollbar {
   height: 6px;
 }
@@ -2469,7 +2474,7 @@ address {
   grid-template-columns: 126px 200px 58px 140px;
   column-gap: 20px;
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 992px) {
   .schedule-item {
     grid-template-columns: 166px 1fr 78px 298px;
     column-gap: 30px;
@@ -2482,20 +2487,33 @@ address {
 .schedule-item .tour-info {
   position: relative;
 }
+.schedule-item [data-more-info] {
+  position: relative;
+}
 .schedule-item__additional-info {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
   padding: 20px;
   background: var(--clr-white);
   display: flex;
   align-items: flex-start;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  z-index: 1000;
   display: none;
 }
-@media only screen and (min-width: 1400px) {
+.schedule-item__additional-info.shown {
+  display: flex;
+}
+@media only screen and (min-width: 1366px) {
   .schedule-item__additional-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: unset;
+    transform: unset;
     width: 873px;
   }
 }
@@ -2521,7 +2539,7 @@ address {
   align-items: center;
   background: #efefef;
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 992px) {
   .schedule-item .date-start,
 .schedule-item .date-end {
     height: 60px;
@@ -2547,19 +2565,28 @@ address {
   display: flex;
   align-items: center;
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 992px) {
   .schedule-item .tour-duration {
     height: 60px;
   }
 }
 .schedule-item .info-btn {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
   width: 100%;
   background: transparent;
   border: none;
 }
-@media only screen and (min-width: 1366px) {
+.schedule-item .info-btn svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+  fill: #727272;
+  fill-rule: evenodd;
+}
+@media only screen and (min-width: 992px) {
   .schedule-item .info-btn {
     height: 60px;
   }
@@ -2790,7 +2817,6 @@ input[type=number]:focus {
 
 input[type=date] {
   height: 60px;
-  width: 108px;
   padding: 0 10px;
   border: 1px solid var(--clr-main);
   border-radius: 3px;
@@ -2799,22 +2825,34 @@ input[type=date] {
   font-weight: 500;
   color: var(--clr-black);
   text-transform: uppercase;
-}
-input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
+  background-color: transparent;
 }
 input[type=date]:focus {
   outline-color: var(--clr-main);
   outline-width: 3px;
 }
 
-label {
+.label {
   font-family: var(--f-chromatica);
-  font-size: 20px;
-  font-weight: 500;
   color: #4a4a4a;
-  text-transform: capitalize;
+}
+.label--1 {
+  font-size: 12px;
+}
+.label--2 {
+  font-size: 18px;
+}
+.label--3 {
+  font-size: 20px;
+}
+.label--w-reg {
+  font-weight: 400;
+}
+.label--w-md {
+  font-weight: 500;
+}
+.label--w-black {
+  font-weight: 900;
 }
 
 .contact-form {
@@ -2888,7 +2926,8 @@ label {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 471px;
+  width: 90vw;
+  max-width: 460px;
   background: var(--clr-white);
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
@@ -2896,22 +2935,43 @@ label {
   z-index: 100000;
   display: none;
 }
+@media only screen and (min-width: 992px) {
+  .booking {
+    width: 471px;
+    max-width: unset;
+  }
+}
 .booking.active {
   display: block;
 }
 .booking__heading {
-  padding: 38px 36px;
+  padding: 24px 22px;
   background: var(--clr-main);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
+@media only screen and (min-width: 992px) {
+  .booking__heading {
+    padding: 38px 36px;
+  }
+}
 .booking__heading h2 {
   font-family: var(--f-righteous);
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--clr-white);
 }
+@media only screen and (min-width: 992px) {
+  .booking__heading h2 {
+    font-size: 26px;
+  }
+}
 .booking__content {
-  padding: 32px 36px;
+  padding: 22px;
+}
+@media only screen and (min-width: 992px) {
+  .booking__content {
+    padding: 32px 36px;
+  }
 }
 .booking__dates {
   display: grid;
@@ -2921,12 +2981,21 @@ label {
 .booking form {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 26px;
+}
+@media only screen and (min-width: 992px) {
+  .booking form {
+    gap: 40px;
+  }
 }
 .booking__vehicle label {
   display: block;
-  margin-bottom: 20px;
-  font-weight: 900;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 992px) {
+  .booking__vehicle label {
+    margin-bottom: 20px;
+  }
 }
 .booking__vehicle p {
   margin-top: 10px;

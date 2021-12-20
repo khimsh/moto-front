@@ -111,7 +111,7 @@ if (document.querySelectorAll('[data-faq-trigger]')) {
 }
 
 // Video Gallery
-if (document.querySelectorAll('[data-video-src]')) {
+if (document.querySelector('[data-video-src]')) {
   const videoSources = document.querySelectorAll('[data-video-src]');
   const videoGallery = document.querySelector('[data-video-gallery]');
   const videoTag = videoGallery.querySelector('[data-video]');
@@ -138,4 +138,40 @@ if (document.querySelectorAll('[data-video-src]')) {
   // videoTag.addEventListener('dblclick', function (e) {
   //   videoTag.requestFullscreen();
   // });
+}
+
+// Schedule More Info
+if (document.querySelector('[data-more-info]')) {
+  const infoContainers = document.querySelectorAll('[data-more-info]');
+
+  infoContainers.forEach((infoContainer) => {
+    const showInfo = infoContainer.querySelector('[data-show-info]');
+    const infoBox = infoContainer.querySelector('[data-info]');
+    const hideInfo = infoContainer.querySelector('[data-close-info]');
+
+    showInfo.addEventListener('click', () => {
+      infoBox.classList.add('shown');
+    });
+
+    hideInfo.addEventListener('click', () => {
+      infoBox.classList.remove('shown');
+    });
+  });
+}
+
+// Booking
+if (document.querySelector('[data-booking]')) {
+  const bookingModal = document.querySelector('[data-booking]');
+  const openBookingModals = document.querySelectorAll('[data-open-booking]');
+  const closeBookingModal = document.querySelector('[data-close-booking]');
+
+  openBookingModals.forEach((openBookingModal) => {
+    openBookingModal.addEventListener('click', () => {
+      bookingModal.classList.add('active');
+    });
+  });
+
+  closeBookingModal.addEventListener('click', () => {
+    bookingModal.classList.remove('active');
+  });
 }

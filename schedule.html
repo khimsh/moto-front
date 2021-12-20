@@ -338,86 +338,34 @@
             <div>end</div>
           </div>
 
+          <!-- განრიგის კონტეინერი -->
           <ul class="schedule-list">
+            <!-- განრიგის კომპინენტი -->
             <li class="schedule-item">
               <div class="dates">
+                <!-- დასაწყისი / დასასრული -->
                 <div class="date-start">4</div>
                 <div class="date-end">9</div>
               </div>
 
+              <!-- ხანგრძლივობა -->
               <div class="tour-duration">8 day tour</div>
 
-              <div>
-                <button class="info-btn" aria-label="show more information">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                  >
+              <div data-more-info>
+                <button
+                  class="info-btn"
+                  aria-label="show more information"
+                  data-show-info
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                     <path
                       d="M15,30A15,15,0,1,0,0,15,15,15,0,0,0,15,30Zm1.744-17.648-4.293.538L12.3,13.6l.843.156c.551.132.66.33.54.879l-1.383,6.5c-.363,1.682.2,2.473,1.515,2.473a3.883,3.883,0,0,0,2.747-1.121l.165-.78a2.077,2.077,0,0,1-1.287.461c-.516,0-.7-.362-.57-1ZM15,10.313a1.875,1.875,0,1,0-1.875-1.875A1.875,1.875,0,0,0,15,10.313Z"
-                      fill="#727272"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div>
-
-              <button class="tour-state tour-state--available">book now</button>
-            </li>
-            <li class="schedule-item">
-              <div class="dates">
-                <div class="date-start">4</div>
-                <div class="date-end">9</div>
-              </div>
-
-              <div class="tour-duration">8 day tour</div>
-
-              <div>
-                <button class="info-btn" aria-label="show more information">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                  >
-                    <path
-                      d="M15,30A15,15,0,1,0,0,15,15,15,0,0,0,15,30Zm1.744-17.648-4.293.538L12.3,13.6l.843.156c.551.132.66.33.54.879l-1.383,6.5c-.363,1.682.2,2.473,1.515,2.473a3.883,3.883,0,0,0,2.747-1.121l.165-.78a2.077,2.077,0,0,1-1.287.461c-.516,0-.7-.362-.57-1ZM15,10.313a1.875,1.875,0,1,0-1.875-1.875A1.875,1.875,0,0,0,15,10.313Z"
-                      fill="#727272"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div>
-
-              <button class="tour-state tour-state--available">book now</button>
-            </li>
-            <li class="schedule-item">
-              <div class="dates">
-                <div class="date-start">4</div>
-                <div class="date-end">9</div>
-              </div>
-
-              <div class="tour-duration">5 day tour</div>
-
-              <div class="tour-info">
-                <button class="info-btn" aria-label="show more information">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                  >
-                    <path
-                      d="M15,30A15,15,0,1,0,0,15,15,15,0,0,0,15,30Zm1.744-17.648-4.293.538L12.3,13.6l.843.156c.551.132.66.33.54.879l-1.383,6.5c-.363,1.682.2,2.473,1.515,2.473a3.883,3.883,0,0,0,2.747-1.121l.165-.78a2.077,2.077,0,0,1-1.287.461c-.516,0-.7-.362-.57-1ZM15,10.313a1.875,1.875,0,1,0-1.875-1.875A1.875,1.875,0,0,0,15,10.313Z"
-                      fill="#727272"
-                      fill-rule="evenodd"
                     />
                   </svg>
                 </button>
 
-                <div class="schedule-item__additional-info">
+                <!-- დამატებითი ინფორმაცია -->
+                <div class="schedule-item__additional-info" data-info>
                   <div class="texts">
                     <p>
                       Contrary to popular belief, Lorem Ipsum is not simply
@@ -445,7 +393,157 @@
                       by H. Rackham.
                     </p>
                   </div>
-                  <button>
+                  <button data-close-info>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                    >
+                      <path
+                        d="M30,15A15,15,0,1,1,15,0,15,15,0,0,1,30,15ZM22.226,9.1A.939.939,0,0,0,20.9,7.773l-5.9,5.9-5.9-5.9A.939.939,0,0,0,7.773,9.1l5.9,5.9-5.9,5.9A.939.939,0,0,0,9.1,22.227l5.9-5.9,5.9,5.9A.939.939,0,1,0,22.227,20.9l-5.9-5.9,5.9-5.9Z"
+                        fill="#2bc492"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- ტურის სტატუსი / დაჯავშნა -->
+              <button
+                class="tour-state tour-state--available"
+                data-open-booking
+              >
+                book now
+              </button>
+            </li>
+            <!-- განრიგის კომპონენტის დასასრული -->
+
+            <li class="schedule-item">
+              <div class="dates">
+                <div class="date-start">4</div>
+                <div class="date-end">9</div>
+              </div>
+
+              <div class="tour-duration">8 day tour</div>
+
+              <div data-more-info>
+                <button
+                  class="info-btn"
+                  aria-label="show more information"
+                  data-show-info
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <path
+                      d="M15,30A15,15,0,1,0,0,15,15,15,0,0,0,15,30Zm1.744-17.648-4.293.538L12.3,13.6l.843.156c.551.132.66.33.54.879l-1.383,6.5c-.363,1.682.2,2.473,1.515,2.473a3.883,3.883,0,0,0,2.747-1.121l.165-.78a2.077,2.077,0,0,1-1.287.461c-.516,0-.7-.362-.57-1ZM15,10.313a1.875,1.875,0,1,0-1.875-1.875A1.875,1.875,0,0,0,15,10.313Z"
+                    />
+                  </svg>
+                </button>
+
+                <div class="schedule-item__additional-info" data-info>
+                  <div class="texts">
+                    <p>
+                      Contrary to popular belief, Lorem Ipsum is not simply
+                      random text. It has roots in a piece of classical Latin
+                      literature from 45 BC, making it over 2000 years old.
+                      Richard McClintock, a Latin professor at Hampden-Sydney
+                      College in Virginia, looked up one of the more obscure
+                      Latin words, consectetur, from a Lorem Ipsum passage, and
+                      going through the cites of the word in classical
+                      literature, discovered the undoubtable source. Lorem Ipsum
+                      comes from sections 1.10.32 and 1.10.33 of "de Finibus
+                      Bonorum et Malorum" (The Extremes of Good and Evil) by
+                      Cicero, written in 45 BC. This book is a treatise on the
+                      theory of ethics, very popular during the Renaissance. The
+                      first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                      comes from a line in section 1.10.32.
+                    </p>
+
+                    <p>
+                      The standard chunk of Lorem Ipsum used since the 1500s is
+                      reproduced below for those interested. Sections 1.10.32
+                      and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero
+                      are also reproduced in their exact original form,
+                      accompanied by English versions from the 1914 translation
+                      by H. Rackham.
+                    </p>
+                  </div>
+                  <button data-close-info>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                    >
+                      <path
+                        d="M30,15A15,15,0,1,1,15,0,15,15,0,0,1,30,15ZM22.226,9.1A.939.939,0,0,0,20.9,7.773l-5.9,5.9-5.9-5.9A.939.939,0,0,0,7.773,9.1l5.9,5.9-5.9,5.9A.939.939,0,0,0,9.1,22.227l5.9-5.9,5.9,5.9A.939.939,0,1,0,22.227,20.9l-5.9-5.9,5.9-5.9Z"
+                        fill="#2bc492"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <button
+                class="tour-state tour-state--available"
+                data-open-booking
+              >
+                book now
+              </button>
+            </li>
+
+            <li class="schedule-item">
+              <div class="dates">
+                <div class="date-start">4</div>
+                <div class="date-end">9</div>
+              </div>
+
+              <div class="tour-duration">5 day tour</div>
+
+              <div data-more-info>
+                <button
+                  class="info-btn"
+                  aria-label="show more information"
+                  data-show-info
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <path
+                      d="M15,30A15,15,0,1,0,0,15,15,15,0,0,0,15,30Zm1.744-17.648-4.293.538L12.3,13.6l.843.156c.551.132.66.33.54.879l-1.383,6.5c-.363,1.682.2,2.473,1.515,2.473a3.883,3.883,0,0,0,2.747-1.121l.165-.78a2.077,2.077,0,0,1-1.287.461c-.516,0-.7-.362-.57-1ZM15,10.313a1.875,1.875,0,1,0-1.875-1.875A1.875,1.875,0,0,0,15,10.313Z"
+                    />
+                  </svg>
+                </button>
+
+                <div class="schedule-item__additional-info" data-info>
+                  <div class="texts">
+                    <p>
+                      Contrary to popular belief, Lorem Ipsum is not simply
+                      random text. It has roots in a piece of classical Latin
+                      literature from 45 BC, making it over 2000 years old.
+                      Richard McClintock, a Latin professor at Hampden-Sydney
+                      College in Virginia, looked up one of the more obscure
+                      Latin words, consectetur, from a Lorem Ipsum passage, and
+                      going through the cites of the word in classical
+                      literature, discovered the undoubtable source. Lorem Ipsum
+                      comes from sections 1.10.32 and 1.10.33 of "de Finibus
+                      Bonorum et Malorum" (The Extremes of Good and Evil) by
+                      Cicero, written in 45 BC. This book is a treatise on the
+                      theory of ethics, very popular during the Renaissance. The
+                      first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                      comes from a line in section 1.10.32.
+                    </p>
+
+                    <p>
+                      The standard chunk of Lorem Ipsum used since the 1500s is
+                      reproduced below for those interested. Sections 1.10.32
+                      and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero
+                      are also reproduced in their exact original form,
+                      accompanied by English versions from the 1914 translation
+                      by H. Rackham.
+                    </p>
+                  </div>
+                  <button data-close-info>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="30"
@@ -473,24 +571,70 @@
 
               <div class="tour-duration">8 day tour</div>
 
-              <div>
-                <button class="info-btn" aria-label="show more information">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                  >
+              <div data-more-info>
+                <button
+                  class="info-btn"
+                  aria-label="show more information"
+                  data-show-info
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                     <path
                       d="M15,30A15,15,0,1,0,0,15,15,15,0,0,0,15,30Zm1.744-17.648-4.293.538L12.3,13.6l.843.156c.551.132.66.33.54.879l-1.383,6.5c-.363,1.682.2,2.473,1.515,2.473a3.883,3.883,0,0,0,2.747-1.121l.165-.78a2.077,2.077,0,0,1-1.287.461c-.516,0-.7-.362-.57-1ZM15,10.313a1.875,1.875,0,1,0-1.875-1.875A1.875,1.875,0,0,0,15,10.313Z"
-                      fill="#727272"
-                      fill-rule="evenodd"
                     />
                   </svg>
                 </button>
+
+                <div class="schedule-item__additional-info" data-info>
+                  <div class="texts">
+                    <p>
+                      Contrary to popular belief, Lorem Ipsum is not simply
+                      random text. It has roots in a piece of classical Latin
+                      literature from 45 BC, making it over 2000 years old.
+                      Richard McClintock, a Latin professor at Hampden-Sydney
+                      College in Virginia, looked up one of the more obscure
+                      Latin words, consectetur, from a Lorem Ipsum passage, and
+                      going through the cites of the word in classical
+                      literature, discovered the undoubtable source. Lorem Ipsum
+                      comes from sections 1.10.32 and 1.10.33 of "de Finibus
+                      Bonorum et Malorum" (The Extremes of Good and Evil) by
+                      Cicero, written in 45 BC. This book is a treatise on the
+                      theory of ethics, very popular during the Renaissance. The
+                      first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                      comes from a line in section 1.10.32.
+                    </p>
+
+                    <p>
+                      The standard chunk of Lorem Ipsum used since the 1500s is
+                      reproduced below for those interested. Sections 1.10.32
+                      and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero
+                      are also reproduced in their exact original form,
+                      accompanied by English versions from the 1914 translation
+                      by H. Rackham.
+                    </p>
+                  </div>
+                  <button data-close-info>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                    >
+                      <path
+                        d="M30,15A15,15,0,1,1,15,0,15,15,0,0,1,30,15ZM22.226,9.1A.939.939,0,0,0,20.9,7.773l-5.9,5.9-5.9-5.9A.939.939,0,0,0,7.773,9.1l5.9,5.9-5.9,5.9A.939.939,0,0,0,9.1,22.227l5.9-5.9,5.9,5.9A.939.939,0,1,0,22.227,20.9l-5.9-5.9,5.9-5.9Z"
+                        fill="#2bc492"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
 
-              <button class="tour-state tour-state--available">book now</button>
+              <button
+                class="tour-state tour-state--available"
+                data-open-booking
+              >
+                book now
+              </button>
             </li>
 
             <li class="schedule-item">
@@ -501,24 +645,67 @@
 
               <div class="tour-duration">8 day tour</div>
 
-              <div>
-                <button class="info-btn" aria-label="show more information">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                  >
+              <div data-more-info>
+                <button
+                  class="info-btn"
+                  aria-label="show more information"
+                  data-show-info
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                     <path
                       d="M15,30A15,15,0,1,0,0,15,15,15,0,0,0,15,30Zm1.744-17.648-4.293.538L12.3,13.6l.843.156c.551.132.66.33.54.879l-1.383,6.5c-.363,1.682.2,2.473,1.515,2.473a3.883,3.883,0,0,0,2.747-1.121l.165-.78a2.077,2.077,0,0,1-1.287.461c-.516,0-.7-.362-.57-1ZM15,10.313a1.875,1.875,0,1,0-1.875-1.875A1.875,1.875,0,0,0,15,10.313Z"
-                      fill="#727272"
-                      fill-rule="evenodd"
                     />
                   </svg>
                 </button>
+
+                <div class="schedule-item__additional-info" data-info>
+                  <div class="texts">
+                    <p>
+                      Contrary to popular belief, Lorem Ipsum is not simply
+                      random text. It has roots in a piece of classical Latin
+                      literature from 45 BC, making it over 2000 years old.
+                      Richard McClintock, a Latin professor at Hampden-Sydney
+                      College in Virginia, looked up one of the more obscure
+                      Latin words, consectetur, from a Lorem Ipsum passage, and
+                      going through the cites of the word in classical
+                      literature, discovered the undoubtable source. Lorem Ipsum
+                      comes from sections 1.10.32 and 1.10.33 of "de Finibus
+                      Bonorum et Malorum" (The Extremes of Good and Evil) by
+                      Cicero, written in 45 BC. This book is a treatise on the
+                      theory of ethics, very popular during the Renaissance. The
+                      first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                      comes from a line in section 1.10.32.
+                    </p>
+
+                    <p>
+                      The standard chunk of Lorem Ipsum used since the 1500s is
+                      reproduced below for those interested. Sections 1.10.32
+                      and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero
+                      are also reproduced in their exact original form,
+                      accompanied by English versions from the 1914 translation
+                      by H. Rackham.
+                    </p>
+                  </div>
+                  <button data-close-info>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                    >
+                      <path
+                        d="M30,15A15,15,0,1,1,15,0,15,15,0,0,1,30,15ZM22.226,9.1A.939.939,0,0,0,20.9,7.773l-5.9,5.9-5.9-5.9A.939.939,0,0,0,7.773,9.1l5.9,5.9-5.9,5.9A.939.939,0,0,0,9.1,22.227l5.9-5.9,5.9,5.9A.939.939,0,1,0,22.227,20.9l-5.9-5.9,5.9-5.9Z"
+                        fill="#2bc492"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
 
-              <button class="tour-state tour-state--neither">book now</button>
+              <button class="tour-state tour-state--neither" data-open-booking>
+                book now
+              </button>
             </li>
           </ul>
           <div class="schedule-wrapper"></div>
@@ -527,7 +714,7 @@
     </main>
 
     <!-- booking modal -->
-    <div class="booking">
+    <div class="booking" data-booking>
       <div class="booking__heading">
         <h2>Fill in the blank for booking</h2>
       </div>
@@ -536,17 +723,23 @@
         <form action="#">
           <div class="booking__dates">
             <div class="form-control">
-              <label for="pickup">Pickup Date</label>
+              <label for="pickup" class="label label--3 label--w-md"
+                >Pickup Date</label
+              >
               <input type="date" name="pickup" id="pickup" />
             </div>
             <div class="form-control">
-              <label for="dropoff">Dropoff Date</label>
+              <label for="dropoff" class="label label--3 label--w-md"
+                >Dropoff Date</label
+              >
               <input type="date" name="dropoff" id="dropoff" />
             </div>
           </div>
 
           <div class="booking__vehicle">
-            <label for="Honda">Quantity of Honda CRF1000 AS</label>
+            <label for="Honda" class="label label--2 label--w-black"
+              >Quantity of Honda CRF1000 AS</label
+            >
             <input type="number" name="Honda" id="Honda" placeholder="0" />
 
             <p>
@@ -556,7 +749,9 @@
           </div>
 
           <div class="booking__vehicle">
-            <label for="Suzuki">Quantity of Suzuki V Strom 650 XTA (ADV)</label>
+            <label for="Suzuki" class="label label--2 label--w-black"
+              >Quantity of Suzuki V Strom 650 XTA (ADV)</label
+            >
             <input type="number" name="Suzuki" id="Suzuki" placeholder="0" />
 
             <p>
@@ -567,7 +762,11 @@
         </form>
       </div>
 
-      <button class="booking__close" aria-label="close booking form">
+      <button
+        class="booking__close"
+        aria-label="close booking form"
+        data-close-booking
+      >
         <svg
           aria-hidden="true"
           focusable="false"

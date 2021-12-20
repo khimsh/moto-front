@@ -17,7 +17,6 @@ input[type='number'] {
 
 input[type='date'] {
   height: 60px;
-  width: 108px;
   padding: 0 10px;
   border: 1px solid var(--clr-main);
   border-radius: 3px;
@@ -26,12 +25,13 @@ input[type='date'] {
   font-weight: 500;
   color: var(--clr-black);
   text-transform: uppercase;
+  background-color: transparent;
 
-  &::-webkit-inner-spin-button,
-  &::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-  }
+  // &::-webkit-inner-spin-button,
+  // &::-webkit-calendar-picker-indicator {
+  //   display: none;
+  //   -webkit-appearance: none;
+  // }
 
   &:focus {
     outline-color: var(--clr-main);
@@ -39,10 +39,31 @@ input[type='date'] {
   }
 }
 
-label {
+.label {
   font-family: var(--f-chromatica);
-  font-size: 20px;
-  font-weight: 500;
   color: #4a4a4a;
-  text-transform: capitalize;
+
+  &--1 {
+    font-size: 12px;
+  }
+
+  &--2 {
+    font-size: 18px;
+  }
+
+  &--3 {
+    font-size: 20px;
+  }
+
+  &--w-reg {
+    font-weight: 400;
+  }
+
+  &--w-md {
+    font-weight: 500;
+  }
+
+  &--w-black {
+    font-weight: 900;
+  }
 }

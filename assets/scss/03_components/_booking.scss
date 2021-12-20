@@ -3,7 +3,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 471px;
+  width: 90vw;
+  max-width: 460px;
   background: var(--clr-white);
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
@@ -12,25 +13,42 @@
 
   display: none;
 
+  @media only screen and (min-width: 992px) {
+    width: 471px;
+    max-width: unset;
+  }
+
   &.active {
     display: block;
   }
 
   &__heading {
-    padding: 38px 36px;
+    padding: 24px 22px;
     background: var(--clr-main);
     box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 
+    @media only screen and (min-width: 992px) {
+      padding: 38px 36px;
+    }
+
     h2 {
       font-family: var(--f-righteous);
-      font-size: 26px;
+      font-size: 20px;
       font-weight: 400;
       color: var(--clr-white);
+
+      @media only screen and (min-width: 992px) {
+        font-size: 26px;
+      }
     }
   }
 
   &__content {
-    padding: 32px 36px;
+    padding: 22px;
+
+    @media only screen and (min-width: 992px) {
+      padding: 32px 36px;
+    }
   }
 
   &__dates {
@@ -42,14 +60,21 @@
   form {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 26px;
+
+    @media only screen and (min-width: 992px) {
+      gap: 40px;
+    }
   }
 
   &__vehicle {
     label {
       display: block;
-      margin-bottom: 20px;
-      font-weight: 900;
+      margin-bottom: 10px;
+
+      @media only screen and (min-width: 992px) {
+        margin-bottom: 20px;
+      }
     }
 
     p {
