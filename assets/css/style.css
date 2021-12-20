@@ -723,8 +723,14 @@ address {
   font-style: normal;
 }
 
+body {
+  color: var(--clr-black);
+  font-family: var(--f-chromatica);
+}
+
 .dark {
   background-color: var(--clr-dark-1);
+  color: var(--clr-white);
 }
 
 .choose-vehicle {
@@ -952,8 +958,41 @@ address {
   display: grid;
 }
 .vehicle-cards--2 {
-  grid-template-columns: 684px 684px;
+  grid-template-columns: 420px;
+  justify-content: center;
   column-gap: 30px;
+  row-gap: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .vehicle-cards--2 {
+    grid-template-columns: 684px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .vehicle-cards--2 {
+    grid-template-columns: 684px 684px;
+  }
+}
+.vehicle-cards--3 {
+  grid-template-columns: 1;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 40px;
+}
+@media only screen and (min-width: 992px) {
+  .vehicle-cards--3 {
+    grid-template-columns: repeat(2, 420px);
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .vehicle-cards--3 {
+    grid-template-columns: repeat(3, 420px);
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .vehicle-cards--3 {
+    grid-template-columns: repeat(3, 420px);
+  }
 }
 
 .social-menu {
@@ -1552,12 +1591,18 @@ address {
 }
 
 .calendar-container {
-  max-width: 1152px;
+  width: 1152px;
   margin: 0 auto;
   margin-top: 50px;
+  padding-inline: 30px;
+}
+
+.calendar-wrapper {
+  width: 100%;
 }
 
 .calendar__heading {
+  width: 100%;
   padding: 30px 28px;
   display: flex;
   justify-content: space-between;
@@ -1586,6 +1631,7 @@ address {
   fill: var(--clr-white);
 }
 .calendar__week-days {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-auto-rows: 142px;
@@ -1603,6 +1649,7 @@ address {
   box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 .calendar__days {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, 166px);
@@ -1905,25 +1952,57 @@ address {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 .vehicle-rent--horizontal {
-  flex-direction: row;
+  flex-direction: column;
+  max-width: 420px;
+  width: 100%;
 }
-.vehicle-rent__content {
-  padding: 40px 30px 30px 23px;
-  width: 350px;
+@media only screen and (min-width: 768px) {
+  .vehicle-rent--horizontal {
+    flex-direction: row;
+    max-width: 684px;
+  }
+  .vehicle-rent--horizontal figure {
+    width: 280px;
+    height: 100% !important;
+  }
 }
-.vehicle-rent figure {
-  width: 280px;
-  height: 100%;
+.vehicle-rent--horizontal figure {
+  width: 100%;
+  height: 300px;
 }
-.vehicle-rent figure img {
+.vehicle-rent--horizontal figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.vehicle-rent--vertical {
+  flex-direction: column;
+  max-width: 420px;
+}
+.vehicle-rent--vertical figure {
+  width: 100%;
+  height: 300px;
+}
+.vehicle-rent--vertical figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vehicle-rent__content {
+  padding: 40px 30px 30px 23px;
+  flex-grow: 1;
 }
 .vehicle-rent__dates {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+.vehicle-rent__dates input[type=date] {
+  width: 120px;
+}
+.vehicle-rent__dates input[type=date]::-webkit-inner-spin-button, .vehicle-rent__dates input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
 }
 .vehicle-rent__footer {
   margin-top: 30px;
@@ -1948,6 +2027,26 @@ address {
   border-radius: 3px;
   width: 171px;
   padding: 18px 0;
+}
+.vehicle-rent .form-range {
+  margin-block: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 186px;
+}
+.vehicle-rent .days {
+  font-family: var(--f-righteous);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--clr-black);
+  text-transform: uppercase;
+}
+.vehicle-rent .vehicle-rent-price {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn {
@@ -2638,11 +2737,22 @@ address {
   border: none;
 }
 
+.moto .page-title {
+  margin-top: 39px;
+  margin-bottom: 30px;
+  text-align: left;
+}
 .moto__overview {
   margin-bottom: 50px;
   display: grid;
-  grid-template-columns: 684px 1fr;
-  column-gap: 30px;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+@media only screen and (min-width: 1200px) {
+  .moto__overview {
+    grid-template-columns: 684px 1fr;
+    column-gap: 30px;
+  }
 }
 .moto__overview figure img {
   width: 100%;
@@ -2652,8 +2762,14 @@ address {
 .moto__images {
   margin-bottom: 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 30px;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .moto__images {
+    grid-template-columns: 684px 1fr;
+    column-gap: 30px;
+  }
 }
 .moto__specs h2 {
   margin-bottom: 50px;
@@ -2662,8 +2778,14 @@ address {
 .specs-grid {
   margin-bottom: 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 30px;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+@media only screen and (min-width: 1200px) {
+  .specs-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
 }
 .specs-grid li {
   display: grid;
@@ -2675,9 +2797,14 @@ address {
 .features {
   margin-bottom: 60px;
   display: grid;
-  grid-template-columns: 332px 332px;
+  grid-template-columns: 332px;
   column-gap: 20px;
   row-gap: 23px;
+}
+@media only screen and (min-width: 768px) {
+  .features {
+    grid-template-columns: 332px 332px;
+  }
 }
 .features li {
   width: 100%;
@@ -2835,6 +2962,7 @@ input[type=date]:focus {
 .label {
   font-family: var(--f-chromatica);
   color: #4a4a4a;
+  text-transform: capitalize;
 }
 .label--1 {
   font-size: 12px;
@@ -3332,6 +3460,67 @@ input[type=date]:focus {
   .contact__wrapper h3 {
     text-align: left;
   }
+}
+
+.rent-dropdowns {
+  margin-block: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .rent-dropdowns {
+    flex-direction: row;
+  }
+}
+.rent-dropdowns button {
+  width: 262px;
+  height: 58px;
+  padding-inline: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--clr-main);
+  font-family: var(--f-righteous);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+.rent-dropdowns button:hover, .rent-dropdowns button:active {
+  color: var(--clr-black);
+  background-color: var(--clr-main);
+}
+.rent-dropdowns button:hover svg, .rent-dropdowns button:active svg {
+  fill: var(--clr-black);
+}
+.rent-dropdowns button.active {
+  color: var(--clr-black);
+  background-color: var(--clr-main);
+}
+.rent-dropdowns button.active svg {
+  transform: rotate(180deg);
+  fill: var(--clr-black);
+}
+.rent-dropdowns button svg {
+  display: block;
+  width: 21px;
+  height: 20px;
+  fill: var(--clr-main);
+  transition: all 0.2s ease-in-out;
+}
+.rent-dropdowns ul {
+  margin-top: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.rent-dropdowns ul.active {
+  max-height: 1000px;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

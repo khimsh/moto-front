@@ -1,0 +1,68 @@
+.rent-dropdowns {
+  margin-block: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  button {
+    width: 262px;
+    height: 58px;
+    padding-inline: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--clr-main);
+    font-family: var(--f-righteous);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &:active {
+      color: var(--clr-black);
+      background-color: var(--clr-main);
+
+      svg {
+        fill: var(--clr-black);
+      }
+    }
+
+    &.active {
+      color: var(--clr-black);
+      background-color: var(--clr-main);
+
+      svg {
+        transform: rotate(180deg);
+        fill: var(--clr-black);
+      }
+    }
+
+    svg {
+      display: block;
+      width: 21px;
+      height: 20px;
+      fill: var(--clr-main);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  ul {
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+
+    &.active {
+      max-height: 1000px;
+      margin-top: 30px;
+    }
+  }
+}

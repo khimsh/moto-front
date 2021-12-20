@@ -42,6 +42,7 @@ input[type='date'] {
 .label {
   font-family: var(--f-chromatica);
   color: #4a4a4a;
+  text-transform: capitalize;
 
   &--1 {
     font-size: 12px;

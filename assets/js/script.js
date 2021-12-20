@@ -96,6 +96,20 @@ if (document.querySelector('[data-trigger-included]')) {
   });
 }
 
+if (document.querySelector('[data-rent-dropdown]')) {
+  const rentDropdowns = document.querySelectorAll('[data-rent-dropdown]');
+
+  rentDropdowns.forEach((rentDropdown) => {
+    const trigger = rentDropdown.querySelector('[data-trigger]');
+    const target = rentDropdown.querySelector('[data-target]');
+
+    trigger.addEventListener('click', () => {
+      trigger.classList.toggle('active');
+      target.classList.toggle('active');
+    });
+  });
+}
+
 // FAQS
 if (document.querySelectorAll('[data-faq-trigger]')) {
   const faqTriggers = document.querySelectorAll('[data-faq-trigger]');
@@ -173,5 +187,19 @@ if (document.querySelector('[data-booking]')) {
 
   closeBookingModal.addEventListener('click', () => {
     bookingModal.classList.remove('active');
+  });
+}
+
+// Range Input
+if (document.querySelector('[data-range]')) {
+  const ranges = document.querySelectorAll('[data-range]');
+
+  ranges.forEach((range) => {
+    const inputRange = range.querySelector('[data-range-input]');
+    const daysSelected = range.querySelector('[data-range-output]');
+
+    inputRange.addEventListener('change', () => {
+      daysSelected.innerHTML = inputRange.value;
+    });
   });
 }

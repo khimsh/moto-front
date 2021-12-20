@@ -1,9 +1,20 @@
 .moto {
+  .page-title {
+    margin-top: 39px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
   &__overview {
     margin-bottom: 50px;
     display: grid;
-    grid-template-columns: 684px 1fr;
-    column-gap: 30px;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+
+    @media only screen and (min-width: 1200px) {
+      grid-template-columns: 684px 1fr;
+      column-gap: 30px;
+    }
 
     figure {
       img {
@@ -17,8 +28,13 @@
   &__images {
     margin-bottom: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 30px;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+
+    @media only screen and (min-width: 768px) {
+      grid-template-columns: 684px 1fr;
+      column-gap: 30px;
+    }
   }
 
   &__specs {
@@ -31,8 +47,13 @@
 .specs-grid {
   margin-bottom: 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 30px;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+
+  @media only screen and (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
 
   li {
     display: grid;
@@ -45,9 +66,13 @@
 .features {
   margin-bottom: 60px;
   display: grid;
-  grid-template-columns: 332px 332px;
+  grid-template-columns: 332px;
   column-gap: 20px;
   row-gap: 23px;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 332px 332px;
+  }
 
   li {
     width: 100%;

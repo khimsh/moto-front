@@ -76,29 +76,69 @@
   box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 
   &--horizontal {
-    flex-direction: row;
+    flex-direction: column;
+    max-width: 420px;
+    width: 100%;
+
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+      max-width: 684px;
+
+      figure {
+        width: 280px;
+        height: 100% !important;
+      }
+    }
+
+    figure {
+      width: 100%;
+      height: 300px;
+    }
+
+    figure {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &--vertical {
+    flex-direction: column;
+    max-width: 420px;
+
+    figure {
+      width: 100%;
+      height: 300px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 
   &__content {
     padding: 40px 30px 30px 23px;
-    width: 350px;
-  }
-
-  figure {
-    width: 280px;
-    height: 100%;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    flex-grow: 1;
   }
 
   &__dates {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    input[type='date'] {
+      width: 120px;
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+      }
+    }
   }
 
   &__footer {
@@ -126,5 +166,28 @@
     border-radius: 3px;
     width: 171px;
     padding: 18px 0;
+  }
+
+  .form-range {
+    margin-block: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 186px;
+  }
+
+  .days {
+    font-family: var(--f-righteous);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--clr-black);
+    text-transform: uppercase;
+  }
+
+  .vehicle-rent-price {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
   }
 }
