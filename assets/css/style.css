@@ -459,10 +459,15 @@ body {
   display: grid;
 }
 .vehicle-cards--2 {
-  grid-template-columns: 420px;
+  grid-template-columns: 340px;
   justify-content: center;
   column-gap: 30px;
   row-gap: 40px;
+}
+@media only screen and (min-width: 460px) {
+  .vehicle-cards--2 {
+    grid-template-columns: 420px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .vehicle-cards--2 {
@@ -475,10 +480,15 @@ body {
   }
 }
 .vehicle-cards--3 {
-  grid-template-columns: 1;
+  grid-template-columns: 340px;
   justify-content: center;
   column-gap: 30px;
   row-gap: 40px;
+}
+@media only screen and (min-width: 460px) {
+  .vehicle-cards--3 {
+    grid-template-columns: 420px;
+  }
 }
 @media only screen and (min-width: 992px) {
   .vehicle-cards--3 {
@@ -1489,8 +1499,13 @@ body {
 }
 .vehicle-rent--horizontal {
   flex-direction: column;
-  max-width: 420px;
+  max-width: 340px;
   width: 100%;
+}
+@media only screen and (min-width: 460px) {
+  .vehicle-rent--horizontal {
+    max-width: 420px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .vehicle-rent--horizontal {
@@ -1533,6 +1548,16 @@ body {
   justify-content: space-between;
   align-items: flex-end;
 }
+.vehicle-rent__dates .booking__dates {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media only screen and (min-width: 460px) {
+  .vehicle-rent__dates .booking__dates {
+    flex-direction: row;
+  }
+}
 .vehicle-rent__dates input[type=date] {
   width: 120px;
 }
@@ -1543,14 +1568,22 @@ body {
 .vehicle-rent__footer {
   margin-top: 30px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+@media only screen and (min-width: 460px) {
+  .vehicle-rent__footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .vehicle-rent .total {
   font-family: var(--f-righteous);
   font-size: 30px;
   font-weight: 400;
   color: #4a4a4a;
+  white-space: nowrap;
 }
 .vehicle-rent button[type=submit] {
   font-family: var(--f-righteous);

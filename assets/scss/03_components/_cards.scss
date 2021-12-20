@@ -77,8 +77,12 @@
 
   &--horizontal {
     flex-direction: column;
-    max-width: 420px;
+    max-width: 340px;
     width: 100%;
+
+    @media only screen and (min-width: 460px) {
+      max-width: 420px;
+    }
 
     @media only screen and (min-width: 768px) {
       flex-direction: row;
@@ -130,6 +134,16 @@
     justify-content: space-between;
     align-items: flex-end;
 
+    .booking__dates {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      @media only screen and (min-width: 460px) {
+        flex-direction: row;
+      }
+    }
+
     input[type='date'] {
       width: 120px;
 
@@ -144,8 +158,14 @@
   &__footer {
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    @media only screen and (min-width: 460px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .total {
@@ -153,6 +173,7 @@
     font-size: 30px;
     font-weight: 400;
     color: #4a4a4a;
+    white-space: nowrap;
   }
 
   button[type='submit'] {
