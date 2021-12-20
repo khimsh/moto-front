@@ -384,19 +384,22 @@
       </div>
     </section>
 
-    <section class="home-video-gallery">
+    <section class="video-gallery-container">
       <div class="container">
-        <div class="home-video-gallery__wrapper">
-          <div class="home-video-gallery__content">
-            <h2 class="title-double">
-              <span class="title-double__text">Gallery</span>
+        <h2 class="title-double title-double--left">
+          <span class="title-double__text">Gallery</span>
 
-              <span class="title-double__decorative">video</span>
-            </h2>
+          <span class="title-double__decorative">video</span>
+        </h2>
 
-            <ul class="home-video-gallery__list">
-              <li>
-                <a href="#">
+        <div class="video-gallery">
+          <div class="video-gallery__content">
+            <ul class="video-list">
+              <li class="video-list__item">
+                <button
+                  class="video-list__btn"
+                  data-video-src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                >
                   <span>Abano Pass by motorcycle</span>
 
                   <span class="play-icon play-icon--small">
@@ -413,11 +416,14 @@
                       />
                     </svg>
                   </span>
-                </a>
+                </button>
               </li>
 
-              <li>
-                <a href="#">
+              <li class="video-list__item">
+                <button
+                  class="video-list__btn"
+                  data-video-src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                >
                   <span>Stepantsminda</span>
 
                   <span class="play-icon play-icon--small">
@@ -434,11 +440,14 @@
                       />
                     </svg>
                   </span>
-                </a>
+                </button>
               </li>
 
-              <li>
-                <a href="#">
+              <li class="video-list__item">
+                <button
+                  class="video-list__btn"
+                  data-video-src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                >
                   <span
                     >Kazbegi, Racha, Tianeti Riding with Mototravel in
                     Georgia</span
@@ -458,11 +467,14 @@
                       />
                     </svg>
                   </span>
-                </a>
+                </button>
               </li>
 
-              <li>
-                <a href="#">
+              <li class="video-list__item">
+                <button
+                  class="video-list__btn"
+                  data-video-src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+                >
                   <span>Tianeti</span>
 
                   <span class="play-icon play-icon--small">
@@ -479,11 +491,14 @@
                       />
                     </svg>
                   </span>
-                </a>
+                </button>
               </li>
 
-              <li>
-                <a href="#">
+              <li class="video-list__item">
+                <button
+                  class="video-list__btn"
+                  data-video-src="assets/videos/vid.mp4"
+                >
                   <span>Soviet cars on Georgian Military Highway</span>
 
                   <span class="play-icon play-icon--small">
@@ -500,7 +515,7 @@
                       />
                     </svg>
                   </span>
-                </a>
+                </button>
               </li>
             </ul>
 
@@ -509,10 +524,10 @@
             </button>
           </div>
 
-          <div class="home-video-gallery__video">
-            <video src="assets/videos/vid.mp4"></video>
+          <div class="video-gallery__player" data-video-gallery>
+            <video src="assets/videos/vid.mp4" data-video></video>
 
-            <button>
+            <button data-play-btn>
               <span class="play-icon play-icon--lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -530,6 +545,7 @@
             </button>
           </div>
         </div>
+        <!-- end video gallery -->
       </div>
     </section>
 

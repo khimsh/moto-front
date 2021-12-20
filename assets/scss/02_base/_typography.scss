@@ -53,6 +53,11 @@
 .title-double {
   position: relative;
 
+  &--left {
+    width: 40%;
+    margin-right: auto;
+  }
+
   &__text {
     position: absolute;
     top: 50%;
@@ -88,6 +93,10 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #2bc492;
+
+    // &--left {
+    //   text-align: left;
+    // }
 
     &--dark {
       color: var(--clr-main);
@@ -137,13 +146,14 @@
   }
 }
 
-.home-video-gallery {
-  a {
+.video-list {
+  &__btn {
     font-family: var(--f-chromatica);
     font-size: 20px;
     font-weight: 500;
     color: var(--clr-white);
     text-decoration: none;
+    text-align: left;
   }
 }
 
