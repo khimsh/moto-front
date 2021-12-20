@@ -154,6 +154,28 @@ if (document.querySelector('[data-video-src]')) {
   // });
 }
 
+// ვიდეო ქარდები
+if (document.querySelector('[data-video-card]')) {
+  const videoCards = document.querySelectorAll('[data-video-card]');
+
+  videoCards.forEach((videoCard) => {
+    const video = videoCard.querySelector('[data-video]');
+    const playBtn = videoCard.querySelector('[data-video-play]');
+
+    playBtn.addEventListener('click', () => {
+      playVideo(video);
+      playBtn.classList.add('fade');
+    });
+
+    video.addEventListener('click', () => {
+      if (!video.paused) {
+        pauseVideo(video);
+        playBtn.classList.remove('fade');
+      }
+    });
+  });
+}
+
 // Schedule More Info
 if (document.querySelector('[data-more-info]')) {
   const infoContainers = document.querySelectorAll('[data-more-info]');

@@ -290,20 +290,20 @@ body {
 .play-icon svg {
   display: block;
 }
+.play-icon--lg {
+  width: 120px;
+  height: 120px;
+  border-width: 8px;
+}
+.play-icon--lg svg {
+  transform: translateX(6px);
+}
 .play-icon--small {
   width: 24px;
   height: 24px;
 }
 .play-icon--small svg {
   transform: translateX(1px);
-}
-.play-icon--lg {
-  width: 120px;
-  height: 120px;
-  border: 8px solid var(--clr-main);
-}
-.play-icon--lg svg {
-  transform: translateX(5px);
 }
 
 .btn-group {
@@ -533,6 +533,33 @@ body {
 #map {
   height: 473px;
   background-color: #fff;
+}
+
+.gallery__title {
+  position: relative;
+  margin-bottom: 50px;
+  font-family: var(--f-righteous);
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  text-align: left;
+}
+.gallery__title span {
+  position: relative;
+  z-index: 1;
+  background-color: var(--clr-dark-1);
+  padding-right: 30px;
+}
+.gallery__title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.56);
 }
 
 :root {
@@ -1649,6 +1676,30 @@ body {
 .btn-container--center {
   justify-content: center;
   gap: 30px;
+}
+
+[data-video-play] {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 120px;
+  border: 8px solid #2bc492;
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.15s ease-in-out;
+}
+[data-video-play].fade {
+  opacity: 0;
+  pointer-events: none;
+}
+[data-video-play] svg {
+  display: block;
+  width: 56.022px;
+  height: 60.244px;
+  fill: #2bc492;
+  transform: translateX(6px);
 }
 
 .scroll-top {

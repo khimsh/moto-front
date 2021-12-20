@@ -172,22 +172,22 @@ body {
     display: block;
   }
 
+  &--lg {
+    width: 120px;
+    height: 120px;
+    border-width: 8px;
+
+    svg {
+      transform: translateX(6px);
+    }
+  }
+
   &--small {
     width: 24px;
     height: 24px;
 
     svg {
       transform: translateX(1px);
-    }
-  }
-
-  &--lg {
-    width: 120px;
-    height: 120px;
-    border: 8px solid var(--clr-main);
-
-    svg {
-      transform: translateX(5px);
     }
   }
 }
@@ -434,4 +434,35 @@ body {
 #map {
   height: 473px;
   background-color: #fff;
+}
+
+.gallery {
+  &__title {
+    position: relative;
+    margin-bottom: 50px;
+    font-family: var(--f-righteous);
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    text-align: left;
+
+    span {
+      position: relative;
+      z-index: 1;
+      background-color: var(--clr-dark-1);
+      padding-right: 30px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 1px;
+      width: 100%;
+      background-color: rgba($color: #fff, $alpha: 0.56);
+    }
+  }
 }

@@ -105,6 +105,32 @@
   }
 }
 
+[data-video-play] {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 120px;
+  border: 8px solid #2bc492;
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.15s ease-in-out;
+
+  &.fade {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  svg {
+    display: block;
+    width: 56.022px;
+    height: 60.244px;
+    fill: #2bc492;
+    transform: translateX(6px);
+  }
+}
+
 .scroll-top {
   position: fixed;
   bottom: 42px;
