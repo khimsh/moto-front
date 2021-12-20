@@ -17,6 +17,8 @@
     margin-bottom: 40px;
     display: flex;
     gap: 70px;
+    overflow-x: auto;
+    padding-bottom: 10px;
 
     button {
       display: flex;

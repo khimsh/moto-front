@@ -220,18 +220,21 @@ body {
   }
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  content: '' !important;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  width: 88px;
-  height: 88px;
+.slick-arrow {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #acacac;
+  border: none;
   border-radius: 10px;
   transition: background-color 0.2s ease-in-out;
+
+  @media only screen and (min-width: 1400px) {
+    width: 88px;
+    height: 88px;
+  }
 
   &:hover,
   &:active {
@@ -240,21 +243,64 @@ body {
 
   svg {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     fill: var(--clr-white);
+
+    @media only screen and (min-width: 1400px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &.slick-prev,
+  &.slick-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.slick-prev {
+    right: 60px;
+
+    @media only screen and (min-width: 1400px) {
+      right: 100px;
+    }
   }
 }
 
 .images {
   margin-top: 38px;
   margin-bottom: 40px;
-  width: 1159px;
+
+  width: 100%;
   margin-right: auto;
   margin-left: unset;
 
-  .swiper-image {
-    width: 207px;
+  .slick-slide {
+    margin-inline: 0;
+
+    @media only screen and (min-width: 530px) {
+      margin-inline: 10px;
+    }
+  }
+
+  .slick-list {
+    width: 70%;
+
+    @media only screen and (min-width: 530px) {
+      width: 80%;
+      margin-left: -10px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      width: 86%;
+    }
+
+    @media only screen and (min-width: 1400px) {
+      width: 1159px;
+    }
   }
 }
 

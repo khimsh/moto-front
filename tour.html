@@ -8,7 +8,12 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <script src="assets/js/swiper-bundle.min.js" defer></script>
+    <!-- jQuery და slick მხოლოდ ამ გვერდზეა საჭირო -->
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/slick.min.js" defer></script>
+    <script src="assets/js/slider.js" defer></script>
+    <!-- jQuery და slick მხოლოდ ამ გვერდზეა საჭირო -->
+
     <script src="assets/js/script.js" defer></script>
   </head>
   <body>
@@ -18,8 +23,29 @@
           <img src="assets/images/logo-trans.png" alt="Mototravel Logo" />
         </a>
 
-        <nav class="navigation">
-          <button class="navigation__close" aria-label="close navigation">
+        <button
+          class="header__menu-btn"
+          aria-label="open navigation"
+          data-nav-open
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+            ></path>
+          </svg>
+        </button>
+
+        <nav class="navigation" data-navigation>
+          <button
+            class="navigation__close"
+            aria-label="close navigation"
+            data-nav-close
+          >
             <svg
               aria-hidden="true"
               focusable="false"
@@ -455,75 +481,46 @@
         <section class="photo-gallery">
           <h2>photogallery</h2>
 
-          <div class="featured-image swiper">
-            <div class="swiper-wrapper">
-              <figure class="swiper-slide">
-                <img src="assets/images/gallery.png" alt="" />
-              </figure>
-              <figure class="swiper-slide">
-                <img src="assets/images/gallery.png" alt="" />
-              </figure>
-              <figure class="swiper-slide">
-                <img src="assets/images/gallery.png" alt="" />
-              </figure>
-              <figure class="swiper-slide">
-                <img src="assets/images/gallery.png" alt="" />
-              </figure>
-              <figure class="swiper-slide">
-                <img src="assets/images/gallery.png" alt="" />
-              </figure>
-              <figure class="swiper-slide">
-                <img src="assets/images/gallery.png" alt="" />
-              </figure>
-            </div>
+          <div class="featured-image">
+            <figure>
+              <img src="assets/images/gallery.png" alt="" />
+            </figure>
+            <figure>
+              <img src="assets/images/gallery.png" alt="" />
+            </figure>
+            <figure>
+              <img src="assets/images/gallery.png" alt="" />
+            </figure>
+            <figure>
+              <img src="assets/images/gallery.png" alt="" />
+            </figure>
+            <figure>
+              <img src="assets/images/gallery.png" alt="" />
+            </figure>
+            <figure>
+              <img src="assets/images/gallery.png" alt="" />
+            </figure>
           </div>
 
-          <div class="images swiper">
-            <div class="swiper-wrapper">
-              <figure class="swiper-slide">
-                <img src="assets/images/gallery.png" alt="" />
-              </figure>
-              <figure class="swiper-slide">
-                <img src="assets/images/gallery.png" alt="" />
-              </figure>
-              <figure class="swiper-slide">
-                <img src="assets/images/gallery.png" alt="" />
-              </figure>
-              <figure class="swiper-slide">
-                <img src="assets/images/gallery.png" alt="" />
-              </figure>
-              <figure class="swiper-slide">
-                <img src="assets/images/gallery.png" alt="" />
-              </figure>
-              <figure class="swiper-slide">
-                <img src="assets/images/gallery.png" alt="" />
-              </figure>
-            </div>
-
-            <div class="swiper-button-prev">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"
-                ></path>
-              </svg>
-            </div>
-            <div class="swiper-button-next">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
-                ></path>
-              </svg>
-            </div>
+          <div class="images">
+            <figure>
+              <img src="assets/images/gallery.png" alt="" />
+            </figure>
+            <figure>
+              <img src="assets/images/gallery.png" alt="" />
+            </figure>
+            <figure>
+              <img src="assets/images/gallery.png" alt="" />
+            </figure>
+            <figure>
+              <img src="assets/images/gallery.png" alt="" />
+            </figure>
+            <figure>
+              <img src="assets/images/gallery.png" alt="" />
+            </figure>
+            <figure>
+              <img src="assets/images/gallery.png" alt="" />
+            </figure>
           </div>
         </section>
       </div>
