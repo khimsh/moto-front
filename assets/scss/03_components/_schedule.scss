@@ -166,12 +166,19 @@
     background: transparent;
     border: none;
 
+    &:hover {
+      svg {
+        fill: var(--clr-main);
+      }
+    }
+
     svg {
       display: block;
       width: 30px;
       height: 30px;
       fill: #727272;
       fill-rule: evenodd;
+      transition: fill 0.15s ease-in-out;
     }
 
     @media only screen and (min-width: 992px) {
@@ -187,6 +194,7 @@
     background: var(--clr-black);
     border: none;
     border-radius: 5px;
+    transition: all 0.15s ease-in-out;
 
     &--full {
       background-color: var(--clr-accent);
@@ -196,8 +204,14 @@
       background-color: var(--clr-main);
     }
 
-    &--neither {
+    &--warning {
       background-color: #fffa66;
+    }
+
+    &:hover,
+    &:active {
+      background-color: var(--clr-black);
+      color: var(--clr-white);
     }
   }
 }

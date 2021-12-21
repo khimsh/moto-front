@@ -57,7 +57,6 @@
 
   &__title {
     position: relative;
-
     z-index: 1000000;
 
     &--center {
@@ -97,6 +96,12 @@
         align-items: flex-end;
       }
     }
+
+    &--contact {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__soviet {
@@ -114,16 +119,6 @@
     p {
       margin-top: 30px;
       margin-bottom: 40px;
-    }
-
-    a {
-      width: 171px;
-      height: 56px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: var(--clr-main);
-      border-radius: 3px;
     }
   }
 }

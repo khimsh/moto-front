@@ -93,6 +93,8 @@ if (document.querySelector('[data-trigger-included]')) {
 
   includedBtn.addEventListener('click', () => {
     includedTarget.classList.toggle('active');
+    includedBtn.classList.toggle('rotate-arrow');
+    includedBtn.classList.toggle('active');
   });
 }
 

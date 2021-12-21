@@ -1,6 +1,7 @@
 .calendar-container {
   margin: 0 auto;
   margin-top: 50px;
+  padding-left: 15px;
 
   @media only screen and (min-width: 1200px) {
     width: 1155px;
@@ -9,13 +10,35 @@
 
 .calendar {
   display: grid;
-  grid-template-columns: repeat(7, 120px);
+  grid-template-columns: repeat(7, 140px);
   grid-template-rows: 90px 142px repeat(5, 166px);
-
   overflow-x: auto;
+  padding-bottom: 10px;
 
   @media only screen and (min-width: 1200px) {
     grid-template-columns: repeat(7, 165px);
+    overflow-x: unset;
+    padding-bottom: unset;
+  }
+
+  /* width */
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 
   .span-full {
@@ -50,6 +73,13 @@
       background-color: var(--clr-main);
       border: none;
       border-radius: 4px;
+      transition: background-color 0.15s ease-in-out;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: var(--clr-black);
+      }
 
       svg {
         display: block;

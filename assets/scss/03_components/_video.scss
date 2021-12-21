@@ -21,7 +21,41 @@
   button {
     width: 34px;
     height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 34px;
     background-color: transparent;
     border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+      svg {
+        fill: var(--clr-white);
+      }
+    }
+  }
+
+  [data-video-play] {
+    svg {
+      width: 26.9px;
+      height: 26.9px;
+    }
+  }
+
+  [data-video-pause] {
+    svg {
+      fill-rule: evenodd;
+      width: 15px;
+      height: 21px;
+    }
+  }
+
+  svg {
+    transform: unset;
+    fill: var(--clr-main);
+    transition: fill 0.15s ease-in-out;
   }
 }

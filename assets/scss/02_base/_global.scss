@@ -167,9 +167,22 @@ body {
   place-content: center;
   border: 2px solid var(--clr-main);
   border-radius: 200px;
+  transition: all 0.15s ease-in-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--clr-main);
+
+    svg {
+      fill: var(--clr-white);
+    }
+  }
 
   svg {
     display: block;
+    fill: var(--clr-main);
+    transition: fill 0.15s ease-in-out;
   }
 
   &--lg {
@@ -187,7 +200,9 @@ body {
     height: 24px;
 
     svg {
-      transform: translateX(1px);
+      width: 11.156px;
+      height: 11.996px;
+      transform: translateX(2px);
     }
   }
 }
@@ -328,18 +343,20 @@ body {
 }
 
 .rent {
-  padding: 50px 0 40px 0;
+  padding: 50px 20px 40px;
   background-repeat: no-repeat;
   background-size: cover;
 
-  &__book-now {
-    display: block;
-    margin: 50px auto 30px auto;
-    background-color: var(--clr-main);
-    border: none;
-    border-radius: 3px;
-    width: 171px;
-    padding: 18px 0;
+  @media only screen and (min-width: 992px) {
+    padding-inline: 0;
+  }
+
+  &__book-now-btn {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__accent {
@@ -409,6 +426,10 @@ body {
   &--white {
     a {
       border-color: var(--clr-white) !important;
+
+      &:hover {
+        border-color: var(--clr-main) !important;
+      }
     }
     svg {
       fill: var(--clr-white) !important;
@@ -422,13 +443,24 @@ body {
     width: 67px;
     height: 67px;
     border: 1px solid var(--clr-main);
+    background-color: transparent;
     border-radius: 67px;
     text-decoration: none;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      background-color: var(--clr-main);
+
+      svg {
+        fill: var(--clr-white);
+      }
+    }
   }
 
   svg {
     display: block;
     fill: var(--clr-main);
+    transition: fill 0.15s ease-in-out;
   }
 
   &__facebook {
