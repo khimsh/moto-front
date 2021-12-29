@@ -1395,6 +1395,56 @@ body {
   background-color: #4a4a4a;
 }
 
+.calendar-new {
+  margin-top: 50px;
+}
+
+#calendar th {
+  height: 140px;
+}
+#calendar th .fc-scrollgrid-sync-inner {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-main);
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+#calendar .fc-daygrid-day-frame {
+  background-color: var(--clr-white) !important;
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+#calendar .fc-col-header-cell-cushion {
+  font-family: var(--f-righteous);
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--clr-white);
+  text-transform: uppercase;
+}
+#calendar .fc-daygrid-day-top {
+  justify-content: center;
+}
+#calendar .fc-daygrid-day-number {
+  font-family: var(--f-righteous);
+  font-size: 20px;
+  font-weight: 400;
+  color: #777777;
+}
+#calendar .fc-header-toolbar {
+  background-color: var(--clr-white);
+  margin-bottom: 0;
+  padding: 28px;
+}
+#calendar .fc-toolbar-title {
+  font-family: var(--f-righteous);
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--clr-black);
+}
+#calendar .fc-button {
+  background-color: var(--clr-main) !important;
+  border-color: transparent !important;
+}
+
 .our-team {
   margin-top: 30px;
   margin-bottom: 94px;

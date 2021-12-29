@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <script src="assets/js/script.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+        });
+        calendar.render();
+      });
+    </script>
   </head>
   <body class="dark">
     <header class="header">
@@ -553,359 +569,8 @@
         </div>
       </section>
 
-      <section class="calendar-container">
-        <div class="calendar">
-          <div class="calendar__heading span-full">
-            <button>
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"
-                ></path>
-              </svg>
-            </button>
-            <h2>November 2021</h2>
-            <button>
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <div class="calendar__weekday">mon</div>
-          <div class="calendar__weekday">tue</div>
-          <div class="calendar__weekday">wen</div>
-          <div class="calendar__weekday">thu</div>
-          <div class="calendar__weekday">fri</div>
-          <div class="calendar__weekday">sat</div>
-          <div class="calendar__weekday">sun</div>
-
-          <div class="calendar__day">
-            <span class="calendar__date">1</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">2</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">3</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">4</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">5</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">6</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">7</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">8</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">9</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">10</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">11</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">12</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">13</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">14</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">15</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">16</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">17</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">18</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">19</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">20</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">21</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">22</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">23</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">24</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">25</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">26</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">27</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">28</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">29</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date">30</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date calendar__date--faded">1</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date calendar__date--faded">2</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date calendar__date--faded">3</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date calendar__date--faded">4</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-          <div class="calendar__day">
-            <span class="calendar__date calendar__date--faded">5</span>
-            <div>
-              <p>Available</p>
-              <p>4 Honda</p>
-              <p>10 Suzuki</p>
-              <p>4 Bmw</p>
-            </div>
-          </div>
-        </div>
+      <div class="container calendar-new">
+        <div id="calendar"></div>
 
         <div class="calendar-info">
           <div>
@@ -917,7 +582,7 @@
             <p>Rent Full Day: No. Rent Hour: Yes.</p>
           </div>
         </div>
-      </section>
+      </div>
     </main>
 
     <footer class="footer">
