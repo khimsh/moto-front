@@ -30,35 +30,42 @@ $(document).ready(function () {
     `;
 
   $('.featured-image').slick({
+    infinite: true,
     arrows: false,
     fade: true,
     draggable: true,
     asNavFor: '.images',
   });
 
+  let imageCount = $('.images').find('img').length;
+  if (imageCount >= 6) {
+    // 5-ზე მეტ სლაიდს არ აჩვენებს
+    imageCount = 6;
+  }
+
   $('.images').slick({
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: imageCount > 1 ? imageCount - 1 : 1,
     slidesToScroll: 1,
     asNavFor: '.featured-image',
     prevArrow: previousArrow,
     nextArrow: nextArrow,
+    focusOnSelect: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: imageCount > 3 ? 3 : imageCount - 1,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: imageCount > 2 ? 2 : imageCount - 1,
           slidesToScroll: 1,
         },
       },
-
       {
         breakpoint: 530,
         settings: {
@@ -68,4 +75,6 @@ $(document).ready(function () {
       },
     ],
   });
+
+  console.log(imageCount);
 });

@@ -403,6 +403,12 @@ body {
 .images .slick-slide {
   margin-inline: 0;
 }
+.images .slick-slide img {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  object-fit: cover;
+}
 @media only screen and (min-width: 530px) {
   .images .slick-slide {
     margin-inline: 10px;
@@ -436,8 +442,13 @@ body {
 }
 .photo-gallery .featured-image img {
   width: 100%;
-  height: 100%;
+  height: 620px;
   object-fit: cover;
+}
+@media only screen and (min-width: 1400px) {
+  .photo-gallery .featured-image img {
+    height: 842px;
+  }
 }
 
 .tour-map {
@@ -664,7 +675,7 @@ body {
 
 .tour__details {
   display: grid;
-  grid-template-columns: repeat(7, 140px);
+  grid-template-columns: repeat(7, minmax(140px, 1fr));
   grid-template-rows: repeat(7, 130px);
   overflow-x: auto;
   padding-bottom: 10px;
@@ -991,6 +1002,10 @@ body {
 .footer address a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+.footer address a:hover, .footer address a:active {
+  color: var(--clr-white);
 }
 .footer__blog-entry h3 a {
   color: inherit;
@@ -1008,6 +1023,10 @@ body {
 .footer__nav a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+.footer__nav a:hover, .footer__nav a:active {
+  color: var(--clr-white);
 }
 .footer__created-by {
   font-size: 14px;
@@ -1016,6 +1035,10 @@ body {
   font-size: 16px;
   color: var(--clr-white);
   text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+.footer__created-by a:hover, .footer__created-by a:active {
+  color: var(--clr-black);
 }
 .footer__copy {
   font-size: 12px;
@@ -1925,13 +1948,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-@media only screen and (min-width: 1366px) {
-  .footer__grid {
-    grid-template-columns: 320px 254px 151px 320px;
-    justify-content: space-between;
-  }
-}
-.footer__grid div:nth-child(4) {
+.footer__grid div:nth-child(3) {
   display: flex;
   flex-direction: column;
 }
@@ -1953,6 +1970,12 @@ body {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+.footer__social svg {
+  transition: fill 0.15s ease-in-out;
+}
+.footer__social a:hover svg, .footer__social a:active svg {
+  fill: var(--clr-white);
 }
 .footer__blog-entry {
   position: relative;
