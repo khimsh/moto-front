@@ -3010,14 +3010,13 @@ input[type=date]:focus {
   font-weight: 400;
   color: var(--clr-black);
 }
-
-.form-control,
-.booking__vehicle {
+.booking .form-control,
+.booking .booking__vehicle {
   margin-bottom: 20px;
 }
 @media only screen and (min-width: 1400px) {
-  .form-control,
-.booking__vehicle {
+  .booking .form-control,
+.booking .booking__vehicle {
     margin-bottom: 30px;
   }
 }

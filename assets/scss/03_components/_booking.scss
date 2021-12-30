@@ -130,14 +130,14 @@
       color: var(--clr-black);
     }
   }
-}
 
-.form-control,
-.booking__vehicle {
-  margin-bottom: 20px;
+  .form-control,
+  .booking__vehicle {
+    margin-bottom: 20px;
 
-  @media only screen and (min-width: 1400px) {
-    margin-bottom: 30px;
+    @media only screen and (min-width: 1400px) {
+      margin-bottom: 30px;
+    }
   }
 }
 
