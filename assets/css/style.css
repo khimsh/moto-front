@@ -1907,6 +1907,9 @@ body {
   justify-content: center;
   gap: 30px;
 }
+.btn-container--sp-between {
+  justify-content: space-between;
+}
 
 [data-video-play] {
   width: 120px;
@@ -2755,6 +2758,9 @@ body {
   fill: var(--clr-main);
 }
 
+input[type=text],
+input[type=tel],
+input[type=email],
 input[type=number] {
   width: 100%;
   height: 60px;
@@ -2766,6 +2772,9 @@ input[type=number] {
   border: 1px solid var(--clr-main);
   border-radius: 3px;
 }
+input[type=text]:focus,
+input[type=tel]:focus,
+input[type=email]:focus,
 input[type=number]:focus {
   outline-color: var(--clr-main);
   outline-width: 3px;
@@ -2889,7 +2898,7 @@ input[type=date]:focus {
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   overflow: hidden;
-  z-index: 100000;
+  z-index: 100000000;
   display: none;
 }
 @media only screen and (min-width: 992px) {
@@ -2906,7 +2915,7 @@ input[type=date]:focus {
   background: var(--clr-main);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1400px) {
   .booking__heading {
     padding: 38px 36px;
   }
@@ -2925,7 +2934,7 @@ input[type=date]:focus {
 .booking__content {
   padding: 22px;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1400px) {
   .booking__content {
     padding: 32px 36px;
   }
@@ -2976,6 +2985,50 @@ input[type=date]:focus {
   width: 25px;
   height: 25px;
   fill: var(--clr-white);
+}
+.booking__price {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (min-width: 1400px) {
+  .booking__price {
+    margin-bottom: 30px;
+  }
+}
+.booking__price p {
+  font-family: var(--f-chromatica);
+  font-size: 20px;
+  font-weight: 500;
+  color: #4a4a4a;
+  text-transform: capitalize;
+}
+.booking__price div {
+  font-family: var(--f-righteous);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--clr-black);
+}
+
+.form-control,
+.booking__vehicle {
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 1400px) {
+  .form-control,
+.booking__vehicle {
+    margin-bottom: 30px;
+  }
+}
+
+[data-form-one],
+[data-form-two] {
+  display: none;
+}
+[data-form-one].shown,
+[data-form-two].shown {
+  display: block;
 }
 
 .pagination {

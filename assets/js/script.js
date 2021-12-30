@@ -221,6 +221,10 @@ if (document.querySelector('[data-booking]')) {
   const openBookingModals = document.querySelectorAll('[data-open-booking]');
   const closeBookingModal = document.querySelector('[data-close-booking]');
 
+  const formPageOne = document.querySelector('[data-form-one]');
+  const formPageTwo = document.querySelector('[data-form-two]');
+  const formPageNext = document.querySelector('[data-form-next]');
+
   openBookingModals.forEach((openBookingModal) => {
     openBookingModal.addEventListener('click', () => {
       bookingModal.classList.add('active');
@@ -229,6 +233,16 @@ if (document.querySelector('[data-booking]')) {
 
   closeBookingModal.addEventListener('click', () => {
     bookingModal.classList.remove('active');
+    formPageOne.classList.add('shown');
+    formPageTwo.classList.remove('shown');
+  });
+
+  // Booking - ფორმის მეორე გვერდზე გადასვლა
+  formPageNext.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    formPageOne.classList.toggle('shown');
+    formPageTwo.classList.toggle('shown');
   });
 }
 

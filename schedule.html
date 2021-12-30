@@ -721,44 +721,98 @@
 
       <div class="booking__content">
         <form action="#">
-          <div class="booking__dates">
-            <div class="form-control">
-              <label for="pickup" class="label label--3 label--w-md"
-                >Pickup Date</label
-              >
-              <input type="date" name="pickup" id="pickup" />
+          <section class="form__section shown" data-form-one>
+            <div class="booking__dates">
+              <div class="form-control">
+                <label for="pickup" class="label label--3 label--w-md"
+                  >Pickup Date</label
+                >
+                <input type="date" name="pickup" id="pickup" />
+              </div>
+              <div class="form-control">
+                <label for="dropoff" class="label label--3 label--w-md"
+                  >Dropoff Date</label
+                >
+                <input type="date" name="dropoff" id="dropoff" />
+              </div>
             </div>
-            <div class="form-control">
-              <label for="dropoff" class="label label--3 label--w-md"
-                >Dropoff Date</label
+
+            <div class="booking__vehicle">
+              <label for="Honda" class="label label--2 label--w-black"
+                >Quantity of Honda CRF1000 AS</label
               >
-              <input type="date" name="dropoff" id="dropoff" />
+              <input
+                type="number"
+                name="Honda"
+                id="Honda"
+                placeholder="0"
+                min="0"
+              />
+
+              <p>
+                Available
+                <small> 4</small>
+              </p>
             </div>
-          </div>
 
-          <div class="booking__vehicle">
-            <label for="Honda" class="label label--2 label--w-black"
-              >Quantity of Honda CRF1000 AS</label
+            <div class="booking__vehicle">
+              <label for="Suzuki" class="label label--2 label--w-black"
+                >Quantity of Suzuki V Strom 650 XTA (ADV)</label
+              >
+              <input
+                type="number"
+                name="Suzuki"
+                id="Suzuki"
+                placeholder="0"
+                min="0"
+              />
+
+              <p>
+                Available
+                <small> 10</small>
+              </p>
+            </div>
+
+            <button
+              class="btn btn--solid btn--t-white btn--block"
+              data-form-next
             >
-            <input type="number" name="Honda" id="Honda" placeholder="0" />
+              Continue to booking
+            </button>
+          </section>
 
-            <p>
-              Available
-              <small> 4</small>
-            </p>
-          </div>
+          <section class="form__section" data-form-two>
+            <div class="form-control">
+              <label for="name" class="label label--3 label--w-md">name</label>
+              <input type="text" id="name" name="name" />
+            </div>
 
-          <div class="booking__vehicle">
-            <label for="Suzuki" class="label label--2 label--w-black"
-              >Quantity of Suzuki V Strom 650 XTA (ADV)</label
-            >
-            <input type="number" name="Suzuki" id="Suzuki" placeholder="0" />
+            <div class="form-control">
+              <label for="phone" class="label label--3 label--w-md"
+                >phone</label
+              >
+              <input type="tel" name="phone" id="phone" />
+            </div>
 
-            <p>
-              Available
-              <small> 10</small>
-            </p>
-          </div>
+            <div class="form-control">
+              <label for="email" class="label label--3 label--w-md"
+                >e-mail</label
+              >
+              <input type="email" name="email" id="email" />
+            </div>
+
+            <div class="booking__price">
+              <p>total price</p>
+              <div>€560</div>
+            </div>
+
+            <div class="btn-container btn-container--sp-between">
+              <button class="btn btn--solid btn--t-white">pay now</button>
+              <button class="btn btn--solid btn--t-white">
+                pay at arrival
+              </button>
+            </div>
+          </section>
         </form>
       </div>
 

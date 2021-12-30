@@ -86,6 +86,10 @@
     justify-content: center;
     gap: 30px;
   }
+
+  &--sp-between {
+    justify-content: space-between;
+  }
 }
 
 [data-video-play] {

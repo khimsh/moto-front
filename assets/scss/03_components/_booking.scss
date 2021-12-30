@@ -9,7 +9,7 @@
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
   overflow: hidden;
-  z-index: 100000;
+  z-index: 100000000;
 
   display: none;
 
@@ -27,7 +27,7 @@
     background: var(--clr-main);
     box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: 1400px) {
       padding: 38px 36px;
     }
 
@@ -46,7 +46,7 @@
   &__content {
     padding: 22px;
 
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: 1400px) {
       padding: 32px 36px;
     }
   }
@@ -103,5 +103,49 @@
       height: 25px;
       fill: var(--clr-white);
     }
+  }
+
+  &__price {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (min-width: 1400px) {
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-family: var(--f-chromatica);
+      font-size: 20px;
+      font-weight: 500;
+      color: #4a4a4a;
+      text-transform: capitalize;
+    }
+
+    div {
+      font-family: var(--f-righteous);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--clr-black);
+    }
+  }
+}
+
+.form-control,
+.booking__vehicle {
+  margin-bottom: 20px;
+
+  @media only screen and (min-width: 1400px) {
+    margin-bottom: 30px;
+  }
+}
+
+[data-form-one],
+[data-form-two] {
+  display: none;
+
+  &.shown {
+    display: block;
   }
 }
