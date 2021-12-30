@@ -151,13 +151,7 @@
     }
 
     input[type='date'] {
-      width: 120px;
-
-      &::-webkit-inner-spin-button,
-      &::-webkit-calendar-picker-indicator {
-        display: none;
-        -webkit-appearance: none;
-      }
+      width: auto;
     }
   }
 

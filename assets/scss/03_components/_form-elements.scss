@@ -30,12 +30,6 @@ input[type='date'] {
   text-transform: uppercase;
   background-color: transparent;
 
-  // &::-webkit-inner-spin-button,
-  // &::-webkit-calendar-picker-indicator {
-  //   display: none;
-  //   -webkit-appearance: none;
-  // }
-
   &:focus {
     outline-color: var(--clr-main);
     outline-width: 3px;

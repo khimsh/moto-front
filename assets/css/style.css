@@ -1773,11 +1773,7 @@ body {
   }
 }
 .vehicle-rent__dates input[type=date] {
-  width: 120px;
-}
-.vehicle-rent__dates input[type=date]::-webkit-inner-spin-button, .vehicle-rent__dates input[type=date]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
+  width: auto;
 }
 .vehicle-rent__footer {
   margin-top: 30px;
