@@ -149,29 +149,12 @@ if (document.querySelector('[data-video-src]')) {
   const videoSources = document.querySelectorAll('[data-video-src]');
   const videoGallery = document.querySelector('[data-video-gallery]');
   const videoTag = videoGallery.querySelector('[data-video]');
-  const playVideoBtn = videoGallery.querySelector('[data-play-btn]');
 
   videoSources.forEach((videoSource) => {
     videoSource.addEventListener('click', () => {
       videoTag.src = `${videoSource.dataset.videoSrc}`;
     });
   });
-
-  playVideoBtn.addEventListener('click', () => {
-    playVideo(videoTag);
-    playVideoBtn.classList.add('fade');
-  });
-
-  videoTag.addEventListener('click', () => {
-    if (!videoTag.paused) {
-      pauseVideo(videoTag);
-      playVideoBtn.classList.remove('fade');
-    }
-  });
-
-  // videoTag.addEventListener('dblclick', function (e) {
-  //   videoTag.requestFullscreen();
-  // });
 }
 
 // ვიდეო ქარდები

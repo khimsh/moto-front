@@ -3088,7 +3088,8 @@ input[type=date]:focus {
   position: relative;
   align-self: end;
 }
-.video-gallery__player video {
+.video-gallery__player iframe {
+  width: 100%;
   aspect-ratio: 16/9;
 }
 .video-gallery__player button {
