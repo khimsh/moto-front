@@ -1,0 +1,46 @@
+.page-content {
+  margin-block: 50px;
+  max-width: 74ch;
+  margin-inline: auto;
+
+  > * + * {
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+
+  h3,
+  h4 {
+    font-size: 24px;
+    text-transform: capitalize;
+  }
+
+  p,
+  li,
+  a {
+    font-size: 16px;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  ul,
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+
+    li {
+      margin-left: 1em;
+    }
+  }
+
+  ul {
+    list-style-type: square;
+  }
+}

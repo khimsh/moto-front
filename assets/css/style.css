@@ -3410,4 +3410,44 @@ input[type=date]:focus {
   margin-top: 30px;
 }
 
+.page-content {
+  margin-block: 50px;
+  max-width: 74ch;
+  margin-inline: auto;
+}
+.page-content > * + * {
+  margin-top: 1.2em;
+  margin-bottom: 1em;
+}
+.page-content h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.page-content h3,
+.page-content h4 {
+  font-size: 24px;
+  text-transform: capitalize;
+}
+.page-content p,
+.page-content li,
+.page-content a {
+  font-size: 16px;
+}
+.page-content p {
+  line-height: 1.5;
+}
+.page-content ul,
+.page-content ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+.page-content ul li,
+.page-content ol li {
+  margin-left: 1em;
+}
+.page-content ul {
+  list-style-type: square;
+}
+
 /*# sourceMappingURL=style.css.map */
