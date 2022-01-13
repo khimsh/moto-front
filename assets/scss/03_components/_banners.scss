@@ -25,6 +25,10 @@
     }
   }
 
+  &--page {
+    height: 240px;
+  }
+
   &--contact {
     height: 340px;
 
@@ -39,6 +43,10 @@
     @media only screen and (min-width: 1400px) {
       height: 920px;
     }
+  }
+
+  &--bg-default {
+    background-image: url(../images/backgrounds/moto-tours-bg.jpg);
   }
 
   &__center {

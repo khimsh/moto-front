@@ -1549,6 +1549,9 @@ body {
     height: 700px;
   }
 }
+.banner--page {
+  height: 240px;
+}
 .banner--contact {
   height: 340px;
 }
@@ -1564,6 +1567,9 @@ body {
   .banner--rent-moto {
     height: 920px;
   }
+}
+.banner--bg-default {
+  background-image: url(../images/backgrounds/moto-tours-bg.jpg);
 }
 .banner__center {
   height: 100%;
@@ -3433,7 +3439,8 @@ input[type=date]:focus {
 .page-content a {
   font-size: 16px;
 }
-.page-content p {
+.page-content p,
+.page-content li {
   line-height: 1.5;
 }
 .page-content ul,
