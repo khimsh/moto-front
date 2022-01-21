@@ -272,11 +272,15 @@
 
   .fc-other-month {
     span {
-      opacity: 0.3;
+      opacity: 0.9;
     }
   }
 
   .fc-content {
     padding: 0.85em;
+  }
+
+  .fc-row .fc-content-skeleton td {
+    text-align: center;
   }
 }

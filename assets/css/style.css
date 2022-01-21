@@ -1479,10 +1479,13 @@ body {
   color: #777777;
 }
 #calendar .fc-other-month span {
-  opacity: 0.3;
+  opacity: 0.9;
 }
 #calendar .fc-content {
   padding: 0.85em;
+}
+#calendar .fc-row .fc-content-skeleton td {
+  text-align: center;
 }
 
 .our-team {
