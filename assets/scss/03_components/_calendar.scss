@@ -270,6 +270,17 @@
     }
   }
 
+  .fc {
+    width: 100%;
+    margin-bottom: 50px;
+
+    @media only screen and (min-width: 1366px) {
+      width: 60%;
+      margin-inline: auto;
+      margin-bottom: 100px;
+    }
+  }
+
   .fc-other-month {
     span {
       opacity: 0.9;
