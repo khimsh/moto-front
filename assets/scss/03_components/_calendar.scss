@@ -218,6 +218,13 @@
     background-color: var(--clr-white);
     margin-bottom: 0;
     padding: 28px;
+
+    h2 {
+      font-family: var(--f-righteous);
+      font-size: 30px;
+      font-weight: 400;
+      color: var(--clr-black);
+    }
   }
 
   .fc-toolbar-title {
@@ -230,5 +237,46 @@
   .fc-button {
     background-color: var(--clr-main) !important;
     border-color: transparent !important;
+    color: var(--clr-white);
+    font-family: inherit;
+    background-image: none !important;
+  }
+
+  .fc-day-header span {
+    height: 100%;
+    display: grid;
+    place-content: center;
+    background-color: var(--clr-main);
+    box-shadow: inset 0px 3px 6px rgb(0 0 0 / 16%), 0px 3px 6px rgb(0 0 0 / 16%);
+
+    font-family: var(--f-righteous);
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--clr-white);
+    text-transform: uppercase;
+  }
+
+  .fc-day-top,
+  .fc-other-month {
+    background: var(--clr-white);
+
+    span {
+      float: unset;
+      text-align: center;
+      font-family: var(--f-righteous);
+      font-size: 20px;
+      font-weight: 400;
+      color: #777777;
+    }
+  }
+
+  .fc-other-month {
+    span {
+      opacity: 0.3;
+    }
+  }
+
+  .fc-content {
+    padding: 0.85em;
   }
 }
