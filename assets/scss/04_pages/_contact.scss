@@ -6,19 +6,10 @@
   address {
     margin-bottom: 40px;
     display: grid;
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
     column-gap: 40px;
     row-gap: 40px;
-
-    @media only screen and (min-width: 1366px) {
-      grid-template-columns: repeat(4, 280px);
-    }
-
-    @media only screen and (min-width: 1400px) {
-      grid-template-columns: repeat(4, 300px);
-      justify-content: space-between;
-    }
 
     h3 {
       margin-bottom: 17px;
@@ -135,11 +126,12 @@
   }
 
   &__wrapper {
+    position: relative;
     margin-block: 50px;
+
     @media only screen and (min-width: 1200px) {
       margin-top: -260px;
       margin-bottom: 120px;
-      position: relative;
       z-index: 10000;
     }
 

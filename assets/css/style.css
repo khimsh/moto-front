@@ -1570,6 +1570,12 @@ body {
   background-size: cover;
   background-position: center;
 }
+.banner--overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.6), rgba(23, 18, 18, 0.45), transparent);
+}
 .banner--fullscreen {
   width: 100%;
   height: 500px;
@@ -2902,7 +2908,7 @@ input[type=date]:focus {
   margin: 0 auto;
   padding: 30px;
   padding-top: 40px;
-  width: 573px;
+  max-width: 573px;
   display: flex;
   flex-direction: column;
   gap: 34px;
@@ -3273,21 +3279,10 @@ input[type=date]:focus {
 .contact address {
   margin-bottom: 40px;
   display: grid;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
   column-gap: 40px;
   row-gap: 40px;
-}
-@media only screen and (min-width: 1366px) {
-  .contact address {
-    grid-template-columns: repeat(4, 280px);
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .contact address {
-    grid-template-columns: repeat(4, 300px);
-    justify-content: space-between;
-  }
 }
 .contact address h3 {
   margin-bottom: 17px;
@@ -3388,13 +3383,13 @@ input[type=date]:focus {
   color: var(--clr-white);
 }
 .contact__wrapper {
+  position: relative;
   margin-block: 50px;
 }
 @media only screen and (min-width: 1200px) {
   .contact__wrapper {
     margin-top: -260px;
     margin-bottom: 120px;
-    position: relative;
     z-index: 10000;
   }
 }

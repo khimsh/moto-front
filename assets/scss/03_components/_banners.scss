@@ -4,6 +4,21 @@
   background-size: cover;
   background-position: center;
 
+  &--overlay {
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom left,
+        hsl(0 0% 0% / 0.95),
+        hsl(0 0% 0% / 0.6),
+        hsl(0 12% 8% / 0.45),
+        transparent
+      );
+    }
+  }
+
   &--fullscreen {
     width: 100%;
     height: 500px;
