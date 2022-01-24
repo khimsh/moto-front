@@ -177,8 +177,20 @@
 }
 
 #calendar {
+  margin-bottom: 50px;
+
+  @media only screen and (min-width: 1366px) {
+    width: 60%;
+    margin-inline: auto;
+    margin-bottom: 100px;
+  }
+
   th {
-    height: 140px;
+    height: 60px;
+
+    @media only screen and (min-width: 720px) {
+      height: 140px;
+    }
 
     .fc-scrollgrid-sync-inner {
       height: 100%;
@@ -197,10 +209,14 @@
 
   .fc-col-header-cell-cushion {
     font-family: var(--f-righteous);
-    font-size: 30px;
+    font-size: 12px;
     font-weight: 400;
     color: var(--clr-white);
     text-transform: uppercase;
+
+    @media only screen and (min-width: 720px) {
+      font-size: 30px;
+    }
   }
 
   .fc-daygrid-day-top {
@@ -209,9 +225,13 @@
 
   .fc-daygrid-day-number {
     font-family: var(--f-righteous);
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
     color: #777777;
+
+    @media only screen and (min-width: 720px) {
+      font-size: 20px;
+    }
   }
 
   .fc-header-toolbar {
@@ -219,11 +239,23 @@
     margin-bottom: 0;
     padding: 28px;
 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media only screen and (min-width: 720px) {
+      flex-direction: row;
+    }
+
     h2 {
       font-family: var(--f-righteous);
-      font-size: 30px;
+      font-size: 20px;
       font-weight: 400;
       color: var(--clr-black);
+
+      @media only screen and (min-width: 720px) {
+        font-size: 30px;
+      }
     }
   }
 
@@ -270,17 +302,6 @@
     }
   }
 
-  .fc {
-    width: 100%;
-    margin-bottom: 50px;
-
-    @media only screen and (min-width: 1366px) {
-      width: 60%;
-      margin-inline: auto;
-      margin-bottom: 100px;
-    }
-  }
-
   .fc-other-month {
     span {
       opacity: 0.9;
@@ -293,5 +314,11 @@
 
   .fc-row .fc-content-skeleton td {
     text-align: center;
+  }
+
+  .fc-view-harness.fc-view-harness-active {
+    @media only screen and (max-width: 720px) {
+      height: 380px !important;
+    }
   }
 }
