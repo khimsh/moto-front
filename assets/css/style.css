@@ -1500,10 +1500,15 @@ body {
   background-color: var(--clr-main);
   box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.16);
   font-family: var(--f-righteous);
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--clr-white);
   text-transform: uppercase;
+}
+@media only screen and (min-width: 720px) {
+  #calendar .fc-day-header span {
+    font-size: 30px;
+  }
 }
 #calendar .fc-day-top,
 #calendar .fc-other-month {
@@ -1528,9 +1533,17 @@ body {
   text-align: center;
 }
 @media only screen and (max-width: 720px) {
-  #calendar .fc-view-harness.fc-view-harness-active {
-    height: 380px !important;
+  #calendar .fc-view-harness.fc-view-harness-active,
+#calendar .fc-scroller.fc-day-grid-container {
+    height: 760px !important;
   }
+}
+#calendar .fc-view-container {
+  width: 100%;
+  overflow-x: auto;
+}
+#calendar .fc-view-container .fc-view {
+  min-width: 600px;
 }
 
 .our-team {
@@ -1623,11 +1636,11 @@ body {
 }
 .banner--fullscreen {
   width: 100%;
-  min-height: 500px;
+  height: 500px;
 }
 @media only screen and (min-width: 1200px) {
   .banner--fullscreen {
-    min-height: 100vh;
+    height: 100vh;
   }
 }
 .banner--third {
