@@ -1553,7 +1553,7 @@ body {
 .our-team__grid {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: 460px;
+  grid-template-columns: minmax(1fr, 460px);
   justify-content: center;
   row-gap: 50px;
 }
@@ -2275,20 +2275,23 @@ body {
 
 .navigation {
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 0;
+  inset: 0 0 0 auto;
+  width: 300px;
   height: 100vh;
   min-height: 500px;
-  padding: 0;
+  padding: 30px;
+  padding-top: 50px;
   background-color: var(--clr-main);
-  z-index: 100000;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: right;
   transition: all 0.15s ease-in-out;
+  z-index: 100000;
 }
 .navigation.active {
-  width: 300px;
-  padding: 30px;
+  opacity: 1;
+  transform: scaleX(1);
 }
 @media only screen and (min-width: 1366px) {
   .navigation {
@@ -2301,6 +2304,9 @@ body {
     box-shadow: unset;
     display: block;
     min-height: unset;
+    padding: unset;
+    opacity: 1;
+    transform: scaleX(1);
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -2389,7 +2395,6 @@ body {
   }
 }
 .navigation__close {
-  display: block;
   margin-left: auto;
   width: 32px;
   height: 32px;
@@ -2398,6 +2403,9 @@ body {
   align-content: center;
   background-color: transparent;
   border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 @media only screen and (min-width: 1366px) {
   .navigation__close {
@@ -3041,7 +3049,7 @@ input[type=date]:focus {
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   overflow: hidden;
-  z-index: 100000000;
+  z-index: 1000000000000000000;
   display: none;
 }
 @media only screen and (min-width: 992px) {

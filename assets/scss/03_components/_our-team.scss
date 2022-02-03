@@ -5,7 +5,7 @@
   &__grid {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: 460px;
+    grid-template-columns: minmax(1fr, 460px);
     justify-content: center;
     row-gap: 50px;
 

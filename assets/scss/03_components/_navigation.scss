@@ -1,19 +1,22 @@
 .navigation {
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 0;
+  inset: 0 0 0 auto;
+  width: 300px;
   height: 100vh;
   min-height: 500px;
-  padding: 0;
+  padding: 30px;
+  padding-top: 50px;
   background-color: var(--clr-main);
-  z-index: 100000;
   box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: right;
   transition: all 0.15s ease-in-out;
+  z-index: 100000;
 
   &.active {
-    width: 300px;
-    padding: 30px;
+    opacity: 1;
+    transform: scaleX(1);
   }
 
   @media only screen and (min-width: 1366px) {
@@ -26,6 +29,9 @@
     box-shadow: unset;
     display: block;
     min-height: unset;
+    padding: unset;
+    opacity: 1;
+    transform: scaleX(1);
   }
 
   @media only screen and (min-width: 1400px) {
@@ -121,7 +127,6 @@
   }
 
   &__close {
-    display: block;
     margin-left: auto;
     width: 32px;
     height: 32px;
@@ -130,6 +135,9 @@
     align-content: center;
     background-color: transparent;
     border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 
     @media only screen and (min-width: 1366px) {
       display: none;
