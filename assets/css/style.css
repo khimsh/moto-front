@@ -3181,6 +3181,21 @@ input[type=date]:focus {
   display: block;
 }
 
+@media only screen and (min-width: 1200px) {
+  [data-form-one].shown,
+[data-form-two].shown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  [data-form-one].shown .btn,
+[data-form-one].shown .btn-container,
+[data-form-two].shown .btn,
+[data-form-two].shown .btn-container {
+    grid-column: span 2;
+  }
+}
+
 .pagination {
   margin-block: 70px;
 }
