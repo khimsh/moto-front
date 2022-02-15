@@ -1868,6 +1868,23 @@ body {
   height: 100%;
   object-fit: cover;
 }
+.vehicle-rent__title a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+.vehicle-rent__title a:hover svg, .vehicle-rent__title a:focus-visible svg {
+  fill: var(--clr-black);
+}
+.vehicle-rent__title a svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--clr-main);
+  fill-rule: evenodd;
+  transition: fill 0.15s ease-in-out;
+}
 .vehicle-rent__content {
   padding: 40px 30px 30px 23px;
   flex-grow: 1;
@@ -1945,6 +1962,27 @@ body {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
+}
+.vehicle-rent__prices {
+  margin-top: 15px;
+  padding-block: 11px;
+  border-top: 1px solid #d5d5d5;
+  border-bottom: 1px solid #d5d5d5;
+}
+.vehicle-rent__prices__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vehicle-rent__prices__days {
+  font-family: var(--f-righteous);
+  font-size: 12px;
+  color: var(--clr-main);
+}
+.vehicle-rent__prices__price {
+  font-family: var(--f-righteous);
+  font-size: 10px;
+  color: var(--clr-black);
 }
 
 .btn {
