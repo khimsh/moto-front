@@ -1,14 +1,24 @@
 .rent-dropdowns {
+  padding-inline: 50px;
   margin-block: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 
-  @media only screen and (min-width: 768px) {
-    flex-direction: row;
-    align-items: flex-start;
+  @media only screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+
+  .dropdown {
+    &:first-of-type {
+      button {
+        margin-left: auto;
+
+        @media only screen and (max-width: 992px) {
+          margin-left: unset;
+        }
+      }
+    }
   }
 
   button {
@@ -26,6 +36,10 @@
     text-transform: uppercase;
     background-color: transparent;
     transition: all 0.2s ease-in-out;
+
+    @media only screen and (max-width: 992px) {
+      margin-inline: auto !important;
+    }
 
     &:hover,
     &:active {
@@ -65,6 +79,25 @@
     &.active {
       max-height: 1000px;
       margin-top: 30px;
+    }
+
+    &.fixed-width {
+      width: 262px;
+      margin-left: auto;
+
+      @media only screen and (max-width: 992px) {
+        margin-left: unset;
+      }
+    }
+
+    &.col-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+
+      @media only screen and (max-width: 1200px) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

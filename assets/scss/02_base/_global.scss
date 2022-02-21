@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  line-height: 1.5;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -20,6 +24,7 @@ ul {
   list-style-type: none;
 }
 
+.dropdown ul,
 ul[role='list'] {
   display: flex;
   flex-direction: column;
@@ -35,8 +40,7 @@ ul[role='list'] {
       content: '';
       position: absolute;
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 0;
       width: 16px;
       height: 16px;
       border-radius: 16px;
@@ -536,8 +540,7 @@ body {
     align-items: center;
     padding-inline: 15px;
     font-size: 18px;
-    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16),
-      0px 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.16);
   }
 
   .bg-main {
